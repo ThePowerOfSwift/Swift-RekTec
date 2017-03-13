@@ -16,7 +16,8 @@
 		D70B22C71E4DA054008DC4CA /* FouthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C51E4DA054008DC4CA /* FouthViewController.swift */; };
 		D70B22C81E4DA054008DC4CA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C61E4DA054008DC4CA /* ThirdViewController.swift */; };
 		D70B22CC1E4DA207008DC4CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */; };
-		D70B22CE1E4DA30C008DC4CA /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22CD1E4DA30C008DC4CA /* BaseTabBarController.swift */; };
+		D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */; };
+		D73E2D371E7686AB0096A97A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		D70B22C51E4DA054008DC4CA /* FouthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FouthViewController.swift; path = Views/FouthViewController.swift; sourceTree = "<group>"; };
 		D70B22C61E4DA054008DC4CA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdViewController.swift; path = Views/ThirdViewController.swift; sourceTree = "<group>"; };
 		D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Views/LoginViewController.swift; sourceTree = "<group>"; };
-		D70B22CD1E4DA30C008DC4CA /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabBarController.swift; path = Views/BaseTabBarController.swift; sourceTree = "<group>"; };
+		D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseStoryBoardSegue.swift; path = Base/BaseStoryBoardSegue.swift; sourceTree = "<group>"; };
+		D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabBarController.swift; path = Base/BaseTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		D70B22AB1E4D86BD008DC4CA /* RekTecCRM */ = {
 			isa = PBXGroup;
 			children = (
+				D73E2D331E7686160096A97A /* Base */,
 				D70B22C01E4D9C38008DC4CA /* Views */,
 				D70B22AC1E4D86BD008DC4CA /* AppDelegate.swift */,
 				D70B22B21E4D86BD008DC4CA /* Main.storyboard */,
@@ -78,13 +81,21 @@
 			isa = PBXGroup;
 			children = (
 				D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */,
-				D70B22CD1E4DA30C008DC4CA /* BaseTabBarController.swift */,
 				D70B22C11E4D9C4C008DC4CA /* FirstViewController.swift */,
 				D70B22C31E4D9C54008DC4CA /* SecondViewController.swift */,
 				D70B22C61E4DA054008DC4CA /* ThirdViewController.swift */,
 				D70B22C51E4DA054008DC4CA /* FouthViewController.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D73E2D331E7686160096A97A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */,
+				D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70B22CE1E4DA30C008DC4CA /* BaseTabBarController.swift in Sources */,
+				D73E2D371E7686AB0096A97A /* BaseTabBarController.swift in Sources */,
+				D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */,
 				D70B22CC1E4DA207008DC4CA /* LoginViewController.swift in Sources */,
 				D70B22C41E4D9C54008DC4CA /* SecondViewController.swift in Sources */,
 				D70B22C71E4DA054008DC4CA /* FouthViewController.swift in Sources */,
@@ -330,6 +342,7 @@
 				D70B22BF1E4D86BD008DC4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
