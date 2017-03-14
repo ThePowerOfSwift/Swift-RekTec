@@ -41,30 +41,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NW-jh-hRx">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7NW-jh-hRx">
                                 <rect key="frame" x="104" y="478" width="167" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登录"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="登录">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="login_pressed:" destination="vQ0-FA-Cr6" eventType="touchUpInside" id="nI5-BE-A6x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4R-0t-BXG">
-                                <rect key="frame" x="282" y="359" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="设置服务器"/>
-                                <connections>
-                                    <action selector="server_address_pressed:" destination="vQ0-FA-Cr6" eventType="touchUpInside" id="iTW-No-vPN"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh1-3E-dvn">
-                                <rect key="frame" x="148" y="359" width="51" height="31"/>
+                                <rect key="frame" x="104" y="354" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="login_button" destination="7NW-jh-hRx" id="ysT-Nz-7PI"/>
                         <outlet property="password" destination="vCt-dD-jxd" id="28d-sD-ctm"/>
                         <outlet property="remember_password" destination="mh1-3E-dvn" id="KqT-jD-p01"/>
                         <outlet property="remember_password_label" destination="kYA-B9-7Y0" id="aEl-Ny-DkG"/>
@@ -123,7 +124,7 @@
                         <viewControllerLayoutGuide type="top" id="bqS-fS-e4K"/>
                         <viewControllerLayoutGuide type="bottom" id="i6c-9K-3hj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jDz-Ag-DJl">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="jDz-Ag-DJl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -149,7 +150,7 @@
         <scene sceneID="m2k-l7-gxb">
             <objects>
                 <navigationController id="Yb0-dl-Uhx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="应用" image="first" id="Dfy-Sv-dkf"/>
+                    <tabBarItem key="tabBarItem" title="应用" image="second" id="Dfy-Sv-dkf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oTL-Er-vO8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -196,7 +197,7 @@
         <scene sceneID="OAB-pd-3pj">
             <objects>
                 <navigationController id="y2J-Kt-gQQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" image="second" id="dpS-ys-bMD"/>
+                    <tabBarItem key="tabBarItem" title="我" image="first" id="dpS-ys-bMD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wqL-eZ-qNp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -268,7 +269,7 @@
                         <viewControllerLayoutGuide type="top" id="Ms6-cd-rNc"/>
                         <viewControllerLayoutGuide type="bottom" id="LTe-gK-hmk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8HQ-bG-Cic">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="8HQ-bG-Cic">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

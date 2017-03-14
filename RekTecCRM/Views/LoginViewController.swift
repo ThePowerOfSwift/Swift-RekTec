@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var login_button: UIButton!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var remember_password: UISwitch!
@@ -20,12 +21,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("I'm in.")
-        
+        // init
         setLoginAvatar()
         setUserNameTextField()
         setPasswordTextField()
         setRememberPassword()
+        setLoginButton()
     }
     
     // avatar设置
@@ -106,9 +107,36 @@ class LoginViewController: UIViewController {
     // 记住密码
     func setRememberPassword(){
         let top = self.view.bounds.height / 4 + 40 + 60 + 10 + 60 + 20
-        remember_password_label.frame = CGRect.init(x: 20, y: top, width: 120, height: 20)
+        let textString = remember_password_label.text
+        let size = textString?.size(attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 14)])
+        
+        remember_password_label.frame = CGRect.init(x: 20, y: top, width: size!.width, height: 20)
         remember_password_label.font = UIFont.boldSystemFont(ofSize: 12)
-        remember_password.frame = CGRect.init(x: 140, y: top, width: 120, height: 20)
+        remember_password_label.textColor = UIColor.init(red: 112 / 255, green: 128 / 255, blue: 144 / 255, alpha: 1)
+        
+        remember_password.frame.origin.x = size!.width + 20
+        remember_password.frame.origin.y = top - 5
+        remember_password.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        // TODO 开关更具上次的选择设置
+        remember_password.setOn(true, animated: true)
+    }
+    
+    // 登录按钮
+    func setLoginButton(){
+        let left = (self.view.bounds.width - 135) / 2
+        let top = self.view.bounds.height / 4 + 40 + 60 + 10 + 60 + 20 + 60
+        login_button.frame = CGRect.init(x: left, y: top, width: 135, height: 35)
+        login_button.layer.borderColor = UIColor.init(red: 0, green: 153 / 255, blue: 1, alpha: 1).cgColor
+        login_button.layer.borderWidth = 0.5
+        login_button.layer.cornerRadius = 5
+        let color = UIColor.init(red: 0, green: 153 / 255, blue: 1, alpha: 1)
+        login_button.setTitleColor(color, for: .normal)
+        login_button.setTitleColor(UIColor.white, for: .selected)
+        login_button.setTitleColor(UIColor.white, for: .highlighted)
+        
+        login_button.setBackgroundImage(ImageUtils.imageWithColor(color: .white, rect: login_button.frame), for: .normal)
+        login_button.setBackgroundImage(ImageUtils.imageWithColor(color: color, rect: login_button.frame), for: .selected)
+        login_button.setBackgroundImage(ImageUtils.imageWithColor(color: color, rect: login_button.frame), for: .highlighted)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,16 +144,13 @@ class LoginViewController: UIViewController {
         
     }
     
-    // 服务器地址设置
-    @IBAction func server_address_pressed(_ sender: UIButton) {
-        print("设置服务器地址")
-    }
-    
     // 登录事件
     @IBAction func login_pressed(_ sender: UIButton) {
         print("IBAction Actived.");
         // TODO 登录，登录成功进入TabBarController页面
-        self.performSegue(withIdentifier: "login_segue", sender: nil)
+        if username.text == "channing" && password.text == "p@ssw0rd" {
+            self.performSegue(withIdentifier: "login_segue", sender: nil)
+        }
     }
     
     
