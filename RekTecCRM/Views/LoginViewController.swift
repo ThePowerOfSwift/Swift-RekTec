@@ -148,9 +148,9 @@ class LoginViewController: UIViewController {
     @IBAction func login_pressed(_ sender: UIButton) {
         print("IBAction Actived.");
         // TODO 登录，登录成功进入TabBarController页面
-        if username.text == "channing" && password.text == "p@ssw0rd" {
+//        if username.text == "channing" && password.text == "p@ssw0rd" {
             self.performSegue(withIdentifier: "login_segue", sender: nil)
-        }
+//        }
     }
     
     
