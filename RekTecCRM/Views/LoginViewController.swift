@@ -21,12 +21,39 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // init
         setLoginAvatar()
         setUserNameTextField()
         setPasswordTextField()
         setRememberPassword()
         setLoginButton()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+
+    func launchAnimation(){
+        let viewController = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
+        let vc = viewController.instantiateViewController(withIdentifier: "LaunchScreen")
+        let launchView = vc.view
+        let mainWindow = UIApplication.shared.keyWindow
+        launchView?.frame = (UIApplication.shared.keyWindow?.frame)!
+        mainWindow?.addSubview(launchView!)
+        
+        UIView.animate(withDuration: 1.0, delay: 0.5, options: .beginFromCurrentState, animations: {
+            launchView?.alpha = 0.0
+            launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
+        }, completion: {
+            (finished: Bool) -> Void in
+            launchView?.removeFromSuperview()
+        })
     }
     
     // avatar设置
@@ -137,11 +164,6 @@ class LoginViewController: UIViewController {
         login_button.setBackgroundImage(ImageUtils.imageWithColor(color: .white, rect: login_button.frame), for: .normal)
         login_button.setBackgroundImage(ImageUtils.imageWithColor(color: color, rect: login_button.frame), for: .selected)
         login_button.setBackgroundImage(ImageUtils.imageWithColor(color: color, rect: login_button.frame), for: .highlighted)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
     }
     
     // 登录事件

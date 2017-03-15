@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,7 +81,6 @@
         <!--通讯录-->
         <scene sceneID="opg-yC-oIm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-mg-Vzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Ojf-CN-C7G" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="通讯录" image="first" id="1ui-dF-N0b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dgn-Pa-6f3">
@@ -91,6 +91,7 @@
                         <segue destination="NQq-hU-Udy" kind="relationship" relationship="rootViewController" id="hjb-FG-Z9V"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-mg-Vzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="-386"/>
         </scene>
@@ -102,7 +103,7 @@
                         <viewControllerLayoutGuide type="top" id="bqS-fS-e4K"/>
                         <viewControllerLayoutGuide type="bottom" id="i6c-9K-3hj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="jDz-Ag-DJl">
+                    <view key="view" contentMode="scaleToFill" id="jDz-Ag-DJl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -127,7 +128,6 @@
         <!--应用-->
         <scene sceneID="m2k-l7-gxb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HYE-8t-ekE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Yb0-dl-Uhx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="应用" image="second" id="Dfy-Sv-dkf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oTL-Er-vO8">
@@ -138,6 +138,7 @@
                         <segue destination="Pkg-1u-zCA" kind="relationship" relationship="rootViewController" id="him-Yq-LyS"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYE-8t-ekE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="309"/>
         </scene>
@@ -174,7 +175,6 @@
         <!--我-->
         <scene sceneID="OAB-pd-3pj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0uR-MD-4zr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="y2J-Kt-gQQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="first" id="dpS-ys-bMD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wqL-eZ-qNp">
@@ -185,6 +185,7 @@
                         <segue destination="eyV-SR-foT" kind="relationship" relationship="rootViewController" id="EoD-bx-3cm"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uR-MD-4zr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="1084"/>
         </scene>
@@ -241,7 +242,6 @@
         <!--消息-->
         <scene sceneID="iIT-B5-ut8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RhC-cK-JrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="ahb-FJ-JW5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="second" id="dGo-lG-Dcy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQS-gz-Cn9">
@@ -256,6 +256,7 @@
                         <segue destination="ZvW-nw-bCf" kind="relationship" relationship="rootViewController" id="6JG-eU-zeT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RhC-cK-JrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="-1072"/>
         </scene>
@@ -267,7 +268,7 @@
                         <viewControllerLayoutGuide type="top" id="Ms6-cd-rNc"/>
                         <viewControllerLayoutGuide type="bottom" id="LTe-gK-hmk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="8HQ-bG-Cic">
+                    <view key="view" contentMode="scaleToFill" id="8HQ-bG-Cic">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
