@@ -23,6 +23,7 @@
 		D7CEB3781E77DA86003FC739 /* TouchIDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3751E77DA86003FC739 /* TouchIDUtils.swift */; };
 		D7CEB37B1E77DA98003FC739 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3791E77DA98003FC739 /* NSDateExtension.swift */; };
 		D7CEB37C1E77DA98003FC739 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB37A1E77DA98003FC739 /* NSObjectExtension.swift */; };
+		D7D97C941E7A29CB001FA3D6 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D97C931E7A29CB001FA3D6 /* FileUtils.swift */; };
 		D7E40D461E7967C700CF73FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E40D441E7967C700CF73FF /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		D7CEB3751E77DA86003FC739 /* TouchIDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchIDUtils.swift; path = Utils/TouchIDUtils.swift; sourceTree = "<group>"; };
 		D7CEB3791E77DA98003FC739 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDateExtension.swift; path = Extentisons/NSDateExtension.swift; sourceTree = "<group>"; };
 		D7CEB37A1E77DA98003FC739 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObjectExtension.swift; path = Extentisons/NSObjectExtension.swift; sourceTree = "<group>"; };
+		D7D97C931E7A29CB001FA3D6 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileUtils.swift; path = Utils/FileUtils.swift; sourceTree = "<group>"; };
 		D7E40D451E7967C700CF73FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		D70B22AB1E4D86BD008DC4CA /* RekTecCRM */ = {
 			isa = PBXGroup;
 			children = (
+				D77D5D9D1E7A880600596138 /* Libraries */,
 				D73E2D331E7686160096A97A /* Base */,
 				D70B22C01E4D9C38008DC4CA /* Views */,
 				D7D316801E76D430003A149C /* Extentisons */,
@@ -112,6 +115,13 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		D77D5D9D1E7A880600596138 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		D7CEB3701E77D4CA003FC739 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 				D7CEB3741E77DA86003FC739 /* DateTimeUtils.swift */,
 				D7CEB3751E77DA86003FC739 /* TouchIDUtils.swift */,
 				D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */,
+				D7D97C931E7A29CB001FA3D6 /* FileUtils.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 				D7CEB3771E77DA86003FC739 /* DateTimeUtils.swift in Sources */,
 				D7CEB37C1E77DA98003FC739 /* NSObjectExtension.swift in Sources */,
 				D70B22C71E4DA054008DC4CA /* FouthViewController.swift in Sources */,
+				D7D97C941E7A29CB001FA3D6 /* FileUtils.swift in Sources */,
 				D70B22C81E4DA054008DC4CA /* ThirdViewController.swift in Sources */,
 				D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */,
 				D7CEB37B1E77DA98003FC739 /* NSDateExtension.swift in Sources */,
