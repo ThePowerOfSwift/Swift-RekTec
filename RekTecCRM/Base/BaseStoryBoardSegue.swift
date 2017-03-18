@@ -8,6 +8,7 @@
 
 import UIKit
 
+// segue view 过渡动画， 存在bug，会使得TabBarController切换Tab不起作用
 class BaseStoryboardSegue: UIStoryboardSegue {
     
     // 控制登录页面到TabBarController页面的过渡动画

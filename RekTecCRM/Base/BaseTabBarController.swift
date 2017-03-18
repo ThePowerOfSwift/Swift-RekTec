@@ -8,7 +8,6 @@
 
 import UIKit
 
-// segue view 过渡动画， 存在bug，会使得TabBarController切换Tab不起作用
 class BaseTabBarController: UITabBarController {
     
     override func viewDidLoad() {

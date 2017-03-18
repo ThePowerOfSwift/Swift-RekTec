@@ -16,6 +16,7 @@
 		D70B22CC1E4DA207008DC4CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */; };
 		D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */; };
 		D73E2D371E7686AB0096A97A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */; };
+		D76B303C1E7D516F00DEC7B2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */; };
 		D7733E1C1E7BC5AF00E0AF1F /* GlobalAppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7733E1B1E7BC5AF00E0AF1F /* GlobalAppSetting.swift */; };
 		D788E24C1E7943BC00B0DF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D788E24B1E7943BC00B0DF1F /* Assets.xcassets */; };
 		D7CEB3721E77D4EA003FC739 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */; };
@@ -40,6 +41,7 @@
 		D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Views/LoginViewController.swift; sourceTree = "<group>"; };
 		D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseStoryBoardSegue.swift; path = Base/BaseStoryBoardSegue.swift; sourceTree = "<group>"; };
 		D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabBarController.swift; path = Base/BaseTabBarController.swift; sourceTree = "<group>"; };
+		D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Base/BaseNavigationController.swift; sourceTree = "<group>"; };
 		D7733E1B1E7BC5AF00E0AF1F /* GlobalAppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalAppSetting.swift; path = Configuration/GlobalAppSetting.swift; sourceTree = "<group>"; };
 		D788E24B1E7943BC00B0DF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageUtils.swift; path = Utils/ImageUtils.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */,
 				D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */,
+				D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				D70B22C81E4DA054008DC4CA /* ThirdViewController.swift in Sources */,
 				D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */,
 				D7CEB37B1E77DA98003FC739 /* NSDateExtension.swift in Sources */,
+				D76B303C1E7D516F00DEC7B2 /* BaseNavigationController.swift in Sources */,
 				D7CEB3781E77DA86003FC739 /* TouchIDUtils.swift in Sources */,
 				D70B22C21E4D9C4C008DC4CA /* FirstViewController.swift in Sources */,
 			);

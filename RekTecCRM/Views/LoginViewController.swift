@@ -99,14 +99,20 @@ class LoginViewController: UIViewController {
         username.leftViewMode = .always
         username.leftView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 60))
         username.leftView?.addSubview(icon)
-        // TODO 用户名保存到全局变量
-        username.text = ""
+
+        username.text = GlobalAppSetting.userName
+        
         
         let border = UIView.init(frame: CGRect.init(x: 20, y: top + 60, width: width, height: 1))
         border.backgroundColor = UIColor.init(red: 240 / 255, green: 240 / 255, blue: 240 / 255, alpha: 1)
         self.view.addSubview(border)
     }
     
+    @IBAction func usernameTextFidldChanged(_ sender: UITextField) {
+        if GlobalAppSetting.isRememberPassword {
+            password.text = username.text != GlobalAppSetting.userName ? "" : GlobalAppSetting.password
+        }
+    }
     // 密码设置
     func setPasswordTextField(){
         let width = self.view.bounds.width - 40
@@ -123,8 +129,8 @@ class LoginViewController: UIViewController {
         password.leftViewMode = .always
         password.leftView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 60))
         password.leftView?.addSubview(icon)
-        // TODO 密码保存到全局变量
-        password.text = ""
+        
+        password.text = GlobalAppSetting.password
         
         let border = UIView.init(frame: CGRect.init(x: 20, y: top + 60, width: width, height: 1))
         border.backgroundColor = UIColor.init(red: 240 / 255, green: 240 / 255, blue: 240 / 255, alpha: 1)
@@ -144,10 +150,17 @@ class LoginViewController: UIViewController {
         remember_password.frame.origin.x = size!.width + 20
         remember_password.frame.origin.y = top - 5
         remember_password.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-        // TODO 开关更具上次的选择设置
-        remember_password.setOn(true, animated: true)
+        
+        remember_password.setOn(GlobalAppSetting.isRememberPassword, animated: true)
     }
     
+    // 记住密码切换
+    @IBAction func rememberSwitchChange(_ sender: UISwitch) {
+        GlobalAppSetting.isRememberPassword = sender.isOn
+        if !GlobalAppSetting.isRememberPassword {
+            GlobalAppSetting.password = ""
+        }
+    }
     // 登录按钮
     func setLoginButton(){
         let left = (self.view.bounds.width - 135) / 2
@@ -168,7 +181,8 @@ class LoginViewController: UIViewController {
     
     // 登录事件
     @IBAction func login_pressed(_ sender: UIButton) {
-        print("IBAction Actived.");
+        GlobalAppSetting.userName = username.text!
+        GlobalAppSetting.password = password.text!
         // TODO 登录，登录成功进入TabBarController页面
 //        if username.text == "channing" && password.text == "p@ssw0rd" {
             self.performSegue(withIdentifier: "login_segue", sender: nil)
