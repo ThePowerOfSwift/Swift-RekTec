@@ -15,6 +15,8 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         print("This is Second View")
+        let db = FileUtils.getBase64StringFromCache(id: "1234567890")
+        print(db)
     }
 
     override func didReceiveMemoryWarning() {

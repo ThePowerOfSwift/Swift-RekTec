@@ -45,7 +45,7 @@ class FileUtils {
             return ""
         }
         let key = id.replacingOccurrences(of: "/", with: "")
-        let path = self.cachesFolder() + "/\(key)"// + ".txt"
+        let path = self.cachesFolder() + "/\(key)"
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: path) {
             return ""
@@ -60,7 +60,7 @@ class FileUtils {
             return
         }
         let key = id.replacingOccurrences(of: "/", with: "")
-        let path = self.cachesFolder() + "/\(key)"// + ".txt"
+        let path = self.cachesFolder() + "/\(key)"
         try! content.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
     }
     
