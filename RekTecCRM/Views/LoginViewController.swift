@@ -61,8 +61,9 @@ class LoginViewController: UIViewController {
         let left = (self.view.bounds.width - 80) / 2
         let top = (self.view.bounds.height / 4 - 80) / 2 + 20
         avatar = UIImageView.init(frame: CGRect.init(x: left, y: top, width: 80, height: 80))
-        // TODO avatar Image可以设置缓存，本地存储
-        avatar.image = UIImage.init(named: "login_avatar_default.png")
+        
+        avatar.image = UserServices.getUserAvatarFromCacheOrDefault(systemUserId: GlobalAppSetting.systemUserId)
+        
         avatar.contentMode = .scaleAspectFit
         avatar.layer.borderColor = UIColor.init(red: 0, green: 153 / 255, blue: 1, alpha: 1).cgColor
         avatar.layer.borderWidth = 0.5

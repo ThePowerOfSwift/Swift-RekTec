@@ -40,7 +40,7 @@ class FileUtils {
     }
     
     // 根据文件Id从缓存文件中获取文件的Base64内容
-    class func getBase64StringFromCache(id: String) -> String{
+    class func getBase64StringFromCache(id: String) -> String?{
         if id.isEmpty {
             return ""
         }
@@ -51,7 +51,7 @@ class FileUtils {
             return ""
         }
         let base64Str = fileManager.contents(atPath: path)
-        return String(bytes: base64Str!, encoding: String.Encoding.utf8)!
+        return String(bytes: base64Str!, encoding: String.Encoding.utf8)
     }
     
     // 将Base64格式的内容存放到缓存中

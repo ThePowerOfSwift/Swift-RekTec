@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D701374B1E7E9811004986F3 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D701374A1E7E9811004986F3 /* UserServices.swift */; };
 		D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22AC1E4D86BD008DC4CA /* AppDelegate.swift */; };
 		D70B22B41E4D86BD008DC4CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70B22B21E4D86BD008DC4CA /* Main.storyboard */; };
 		D70B22C21E4D9C4C008DC4CA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C11E4D9C4C008DC4CA /* FirstViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D701374A1E7E9811004986F3 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServices.swift; path = Services/UserServices.swift; sourceTree = "<group>"; };
 		D70B22A91E4D86BD008DC4CA /* RekTecCRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RekTecCRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70B22AC1E4D86BD008DC4CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70B22B31E4D86BD008DC4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D70137491E7E97B8004986F3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D701374A1E7E9811004986F3 /* UserServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		D70B22A01E4D86BD008DC4CA = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +94,9 @@
 		D70B22AB1E4D86BD008DC4CA /* RekTecCRM */ = {
 			isa = PBXGroup;
 			children = (
-				D7733E1A1E7BC56100E0AF1F /* Configuration */,
 				D77D5D9D1E7A880600596138 /* Libraries */,
+				D7733E1A1E7BC56100E0AF1F /* Configuration */,
+				D70137491E7E97B8004986F3 /* Services */,
 				D73E2D331E7686160096A97A /* Base */,
 				D70B22C01E4D9C38008DC4CA /* Views */,
 				D7D316801E76D430003A149C /* Extentisons */,
@@ -240,6 +251,7 @@
 				D7CEB3771E77DA86003FC739 /* DateTimeUtils.swift in Sources */,
 				D7CEB37C1E77DA98003FC739 /* NSObjectExtension.swift in Sources */,
 				D70B22C71E4DA054008DC4CA /* FouthViewController.swift in Sources */,
+				D701374B1E7E9811004986F3 /* UserServices.swift in Sources */,
 				D7D97C941E7A29CB001FA3D6 /* FileUtils.swift in Sources */,
 				D70B22C81E4DA054008DC4CA /* ThirdViewController.swift in Sources */,
 				D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */,
