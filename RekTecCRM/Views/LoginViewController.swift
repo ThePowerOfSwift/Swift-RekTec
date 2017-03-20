@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var login_button: UIButton!
     @IBOutlet weak var username: UITextField!
@@ -21,40 +21,84 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // init
+        // components init
         setLoginAvatar()
         setUserNameTextField()
         setPasswordTextField()
         setRememberPassword()
         setLoginButton()
+        
+        username.delegate = self
+        password.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
-
-    func launchAnimation(){
-        let viewController = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
-        let vc = viewController.instantiateViewController(withIdentifier: "LaunchScreen")
-        let launchView = vc.view
-        let mainWindow = UIApplication.shared.keyWindow
-        launchView?.frame = (UIApplication.shared.keyWindow?.frame)!
-        mainWindow?.addSubview(launchView!)
-        
-        UIView.animate(withDuration: 1.0, delay: 0.5, options: .beginFromCurrentState, animations: {
-            launchView?.alpha = 0.0
-            launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
-        }, completion: {
-            (finished: Bool) -> Void in
-            launchView?.removeFromSuperview()
-        })
+    
+    // 点击view上空白的地方收起键盘
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
+    
+    // 处理键盘遮挡输入框的问题
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let frame = textField.frame
+        var keyboardHeight: CGFloat = 216.0
+        if textField == username {
+            keyboardHeight += 40
+        }
+        // 计算键盘是否遮挡输入框
+        let offset = frame.origin.y + 60 - (self.view.frame.size.height - keyboardHeight)
+        
+        if offset > 0 {
+            UIView.beginAnimations("ResizeForKeyboard", context: nil)
+            UIView.setAnimationDuration(0.30)
+            
+            self.view.frame = CGRect.init(x: 0.0, y: -offset, width: self.view.frame.size.width, height: self.view.frame.size.height)
+            
+            UIView.commitAnimations()
+        }
+    }
+    
+    // 收起键盘时恢复view
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.view.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+    }
+    
+    // return键点击事件控制
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == username {
+            password.becomeFirstResponder()
+        }
+        else if textField == password {
+            self.login_pressed(login_button)
+        }
+        return true
+    }
+
+//    func launchAnimation(){
+//        let viewController = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
+//        let vc = viewController.instantiateViewController(withIdentifier: "LaunchScreen")
+//        let launchView = vc.view
+//        let mainWindow = UIApplication.shared.keyWindow
+//        launchView?.frame = (UIApplication.shared.keyWindow?.frame)!
+//        mainWindow?.addSubview(launchView!)
+//        
+//        UIView.animate(withDuration: 1.0, delay: 0.5, options: .beginFromCurrentState, animations: {
+//            launchView?.alpha = 0.0
+//            launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
+//        }, completion: {
+//            (finished: Bool) -> Void in
+//            launchView?.removeFromSuperview()
+//        })
+//    }
     
     // avatar设置
     func setLoginAvatar(){
@@ -185,9 +229,9 @@ class LoginViewController: UIViewController {
         GlobalAppSetting.userName = username.text!
         GlobalAppSetting.password = password.text!
         // TODO 登录，登录成功进入TabBarController页面
-//        if username.text == "channing" && password.text == "p@ssw0rd" {
+        if username.text == "channing" && password.text == "p@ssw0rd" {
             self.performSegue(withIdentifier: "login_segue", sender: nil)
-//        }
+        }
     }
     
     
