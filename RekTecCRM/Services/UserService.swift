@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UserServices{
+class UserService{
     
     // 获取用户头像，缓存中有则直接从缓存取，若缓存中无则使用默认头像
     class func getUserAvatarFromCacheOrDefault(systemUserId: String) -> UIImage?{

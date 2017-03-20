@@ -35,6 +35,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // sqlitedb测试
+        var dataInfoTable = [ColumnType]()
+        let col1 = ColumnType(colName: "caption", colType: "varchar(100)", colValue: nil)
+        let col2 = ColumnType(colName: "account", colType: "varchar(100)", colValue: nil)
+        let col3 = ColumnType(colName: "password", colType: "varchar(100)", colValue: nil)
+        let col4 = ColumnType(colName: "iconName", colType: "varchar(100)", colValue: nil)
+        let col5 = ColumnType(colName: "lastEditTime", colType: "datetime", colValue: nil)
+        let col6 = ColumnType(colName: "remark", colType: "varchar(200)", colValue: nil)
+        let col7 = ColumnType(colName: "key", colType: "varchar(100) not null", colValue: nil)
+        let col8 = ColumnType(colName: "indexKey", colType: "int not null", colValue: nil)
+        dataInfoTable += [col1, col2, col3, col4, col5, col6, col7, col8]
+        SQliteRepository.createTable(tableName: SQliteRepository.PASSWORDINFOTABLE, columns: dataInfoTable)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -106,7 +118,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let top = (self.view.bounds.height / 4 - 80) / 2 + 20
         avatar = UIImageView.init(frame: CGRect.init(x: left, y: top, width: 80, height: 80))
         
-        avatar.image = UserServices.getUserAvatarFromCacheOrDefault(systemUserId: GlobalAppSetting.systemUserId)
+        avatar.image = UserService.getUserAvatarFromCacheOrDefault(systemUserId: GlobalAppSetting.systemUserId)
         
         avatar.contentMode = .scaleAspectFit
         avatar.layer.borderColor = UIColor.init(red: 0, green: 153 / 255, blue: 1, alpha: 1).cgColor
@@ -226,12 +238,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // 登录事件
     @IBAction func login_pressed(_ sender: UIButton) {
-        GlobalAppSetting.userName = username.text!
-        GlobalAppSetting.password = password.text!
-        // TODO 登录，登录成功进入TabBarController页面
-        if username.text == "channing" && password.text == "p@ssw0rd" {
+        AuthenticationService.loginCheck(authenUser: nil, success: {reponse in
+            GlobalAppSetting.userName = self.username.text!
+            GlobalAppSetting.password = self.password.text!
             self.performSegue(withIdentifier: "login_segue", sender: nil)
-        }
+        }, failure: {reponse in
+            // TODO登录失败处理
+        })
     }
     
     
