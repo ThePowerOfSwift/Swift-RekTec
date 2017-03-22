@@ -238,15 +238,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // 登录事件
     @IBAction func login_pressed(_ sender: UIButton) {
-        AuthenticationService.loginCheck(authenUser: nil, success: {reponse in
-            GlobalAppSetting.userName = self.username.text!
+        GlobalAppSetting.userName = self.username.text!
+        var authUser = AuthenUser()
+        authUser.Uid = username.text!
+        // TODO 密码需要加密
+        authUser.Pwd = password.text!
+        
+        AuthenticationService.loginCheck(authenUser: authUser, success: {reponse in
             GlobalAppSetting.password = self.password.text!
             self.performSegue(withIdentifier: "login_segue", sender: nil)
         }, failure: {reponse in
             // TODO登录失败处理
         })
     }
-    
     
     // 在这个方法中可以给TabBarController页面传递参数
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
