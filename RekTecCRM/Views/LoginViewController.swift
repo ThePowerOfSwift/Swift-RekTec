@@ -246,6 +246,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         AuthenticationService.loginCheck(authenUser: authUser, success: {reponse in
             GlobalAppSetting.password = self.password.text!
+            // TODO 存储登录信息
+            
+            
             self.performSegue(withIdentifier: "login_segue", sender: nil)
         }, failure: {reponse in
             // TODO登录失败处理

@@ -18,10 +18,13 @@ class AuthenUser{
     init() {
         let LoginLogId = UUID().uuidString
         let OsVersion = UIDevice.current.systemVersion
-        var AppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String + "." + Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
         let Html5Version = GlobalAppSetting.wwwVersion
-        let ClientType = 2
-        self.pluginContent = "{\"LoginLogId\":" + LoginLogId + ",\"OsVersion\":" + OsVersion + ",\"AppVersion\":" + AppVersion + ",\"Html5Version\":" + Html5Version + ",\"ClientType\":" + ClientType + "}"
+        let ClientType = "2"
+        self.pluginContent = "{\"LoginLogId\":" + LoginLogId + ",\"OsVersion\":"
+        self.pluginContent += OsVersion + ",\"AppVersion\":" + "1.0.0" + ",\"Html5Version\":"
+        self.pluginContent += Html5Version + ",\"ClientType\":" + ClientType + "}"
+        self.uid = ""
+        self.pwd = ""
     }
     
     var Uid: String{
