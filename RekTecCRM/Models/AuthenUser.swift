@@ -16,13 +16,13 @@ class AuthenUser{
     var pluginContent: String
     
     init() {
-        let LoginLogId = UUID().uuidString
+        let LoginLogId = UUID().uuidString.lowercased()
         let OsVersion = UIDevice.current.systemVersion
         let Html5Version = GlobalAppSetting.wwwVersion
         let ClientType = "2"
-        self.pluginContent = "{\"LoginLogId\":" + LoginLogId + ",\"OsVersion\":"
-        self.pluginContent += OsVersion + ",\"AppVersion\":" + "1.0.0" + ",\"Html5Version\":"
-        self.pluginContent += Html5Version + ",\"ClientType\":" + ClientType + "}"
+        self.pluginContent = "{\"LoginLogId\":\"" + LoginLogId + "\",\"OsVersion\":\""
+        self.pluginContent += OsVersion + "\",\"AppVersion\":" + "\"1.0.0.0\"" + ",\"Html5Version\":\""
+        self.pluginContent += Html5Version + "\",\"ClientType\":" + ClientType + "}"
         self.uid = ""
         self.pwd = ""
     }

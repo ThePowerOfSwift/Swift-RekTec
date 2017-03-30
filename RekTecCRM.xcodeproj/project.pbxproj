@@ -29,6 +29,7 @@
 		D72E8A921E7FD6BA005D8AAC /* AuthenUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E8A911E7FD6BA005D8AAC /* AuthenUser.swift */; };
 		D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */; };
 		D73E2D371E7686AB0096A97A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */; };
+		D766AC321E8CC89600A7A2F4 /* AlamofireHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766AC311E8CC89600A7A2F4 /* AlamofireHeaders.swift */; };
 		D76B303C1E7D516F00DEC7B2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */; };
 		D7733E1C1E7BC5AF00E0AF1F /* GlobalAppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7733E1B1E7BC5AF00E0AF1F /* GlobalAppSetting.swift */; };
 		D788E24C1E7943BC00B0DF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D788E24B1E7943BC00B0DF1F /* Assets.xcassets */; };
@@ -113,6 +114,7 @@
 		D72E8A911E7FD6BA005D8AAC /* AuthenUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenUser.swift; path = Models/AuthenUser.swift; sourceTree = "<group>"; };
 		D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseStoryBoardSegue.swift; path = Base/BaseStoryBoardSegue.swift; sourceTree = "<group>"; };
 		D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabBarController.swift; path = Base/BaseTabBarController.swift; sourceTree = "<group>"; };
+		D766AC311E8CC89600A7A2F4 /* AlamofireHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireHeaders.swift; path = Utils/AlamofireHeaders.swift; sourceTree = "<group>"; };
 		D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Base/BaseNavigationController.swift; sourceTree = "<group>"; };
 		D7733E1B1E7BC5AF00E0AF1F /* GlobalAppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalAppSetting.swift; path = Configuration/GlobalAppSetting.swift; sourceTree = "<group>"; };
 		D788E24B1E7943BC00B0DF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */,
 				D72E8A8C1E7FD2D2005D8AAC /* SQliteRepository.swift */,
 				D7CEB3751E77DA86003FC739 /* TouchIDUtils.swift */,
+				D766AC311E8CC89600A7A2F4 /* AlamofireHeaders.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				D70B22C71E4DA054008DC4CA /* FouthViewController.swift in Sources */,
 				D701374B1E7E9811004986F3 /* UserService.swift in Sources */,
 				D7D97C941E7A29CB001FA3D6 /* FileUtils.swift in Sources */,
+				D766AC321E8CC89600A7A2F4 /* AlamofireHeaders.swift in Sources */,
 				D70B22C81E4DA054008DC4CA /* ThirdViewController.swift in Sources */,
 				D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */,
 				D7CEB37B1E77DA98003FC739 /* NSDateExtension.swift in Sources */,

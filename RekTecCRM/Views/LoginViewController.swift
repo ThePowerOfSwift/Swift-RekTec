@@ -230,6 +230,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         login_button.setTitleColor(color, for: .normal)
         login_button.setTitleColor(UIColor.white, for: .selected)
         login_button.setTitleColor(UIColor.white, for: .highlighted)
+        login_button.setTitleColor(UIColor.white, for: .disabled)
         
         login_button.setBackgroundImage(ImageUtils.imageWithColor(color: .white, rect: login_button.frame), for: .normal)
         login_button.setBackgroundImage(ImageUtils.imageWithColor(color: color, rect: login_button.frame), for: .selected)
@@ -238,20 +239,45 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // 登录事件
     @IBAction func login_pressed(_ sender: UIButton) {
+        self.login_button.isEnabled = false
+        self.login_button.setTitle("正在登录...", for: .disabled)
+        
         GlobalAppSetting.userName = self.username.text!
-        var authUser = AuthenUser()
+        let authUser = AuthenUser()
         authUser.Uid = username.text!
         // TODO 密码需要加密
         authUser.Pwd = password.text!
         
         AuthenticationService.loginCheck(authenUser: authUser, success: {reponse in
             GlobalAppSetting.password = self.password.text!
-            // TODO 存储登录信息
+            
+            if reponse["AuthToken"].stringValue.isEmpty || reponse["SystemUserId"].stringValue.isEmpty {
+                self.login_button.isEnabled = true
+                self.login_button.setTitle("登录", for: .normal)
+                return
+            }
+            
+            GlobalAppSetting.xrmAuthToken = reponse["AuthToken"].stringValue
+            GlobalAppSetting.systemUserId = reponse["SystemUserId"].stringValue
+            
+            // TODO 推送注册
+            
+            // TODO 更新资源H5
+            self.login_button.setTitle("正在更新资源...", for: .disabled)
+            
+            // TODO 更新头像
+            self.login_button.setTitle("正在更新头像...", for: .disabled)
             
             
             self.performSegue(withIdentifier: "login_segue", sender: nil)
+            
+            self.login_button.isEnabled = true
+            self.login_button.setTitle("登录", for: .normal)
         }, failure: {reponse in
             // TODO登录失败处理
+            print(reponse)
+            self.login_button.isEnabled = true
+            self.login_button.setTitle("登录", for: .normal)
         })
     }
     

@@ -90,7 +90,7 @@ class GlobalAppSetting{
     static var wwwVersion: String{
         get{
             let v = UserDefaults.standard.value(forKey: "wwwVersion")
-            return v == nil ? "" : v as! String
+            return v == nil ? "1.0.0.0" : v as! String
         }
         set{
             UserDefaults.standard.set(newValue, forKey: "wwwVersion")
