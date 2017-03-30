@@ -262,6 +262,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
             
             GlobalAppSetting.xrmAuthToken = reponse["AuthToken"].stringValue
             GlobalAppSetting.systemUserId = reponse["SystemUserId"].stringValue
+            GlobalAppSetting.isFirstOpen = reponse["IsLoginFirst"].boolValue
             
             // TODO 推送注册
             
@@ -278,6 +279,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
             self.login_button.isEnabled = true
             self.login_button.setTitle("登录", for: .normal)
         }, failure: {reponse in
+            self.stopAnimating()
             // TODO登录失败处理
             print(reponse)
             self.login_button.isEnabled = true
