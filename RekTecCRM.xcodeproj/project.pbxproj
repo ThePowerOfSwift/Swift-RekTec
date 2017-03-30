@@ -72,6 +72,27 @@
 			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
 			remoteInfo = "SwiftyJSON iOS";
 		};
+		D7FB3AFF1E8CE61000B31E1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7FB3AF81E8CE61000B31E1A /* NVActivityIndicatorView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90A8792F1BA554A0001C8989;
+			remoteInfo = NVActivityIndicatorView;
+		};
+		D7FB3B011E8CE61000B31E1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7FB3AF81E8CE61000B31E1A /* NVActivityIndicatorView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 239CAB201B5EBB2E0051DC06;
+			remoteInfo = NVActivityIndicatorViewDemo;
+		};
+		D7FB3B031E8CE61000B31E1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7FB3AF81E8CE61000B31E1A /* NVActivityIndicatorView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23FB134F1D76D5370096EBE3;
+			remoteInfo = NVActivityIndicatorViewTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,6 +147,7 @@
 		D7CEB37A1E77DA98003FC739 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObjectExtension.swift; path = Extentisons/NSObjectExtension.swift; sourceTree = "<group>"; };
 		D7D97C931E7A29CB001FA3D6 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileUtils.swift; path = Utils/FileUtils.swift; sourceTree = "<group>"; };
 		D7E40D451E7967C700CF73FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D7FB3AF81E8CE61000B31E1A /* NVActivityIndicatorView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NVActivityIndicatorView.xcodeproj; path = "Libraries/NVActivityIndicatorView-master/NVActivityIndicatorView.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +289,7 @@
 		D77D5D9D1E7A880600596138 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D7FB3AF81E8CE61000B31E1A /* NVActivityIndicatorView.xcodeproj */,
 				D72E8A711E7FD0AF005D8AAC /* SwiftyJSON.xcodeproj */,
 				D72E8A661E7FD05B005D8AAC /* Alamofire.xcodeproj */,
 			);
@@ -294,6 +317,16 @@
 				D7CEB37A1E77DA98003FC739 /* NSObjectExtension.swift */,
 			);
 			name = Extentisons;
+			sourceTree = "<group>";
+		};
+		D7FB3AF91E8CE61000B31E1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7FB3B001E8CE61000B31E1A /* NVActivityIndicatorView.framework */,
+				D7FB3B021E8CE61000B31E1A /* NVActivityIndicatorViewDemo.app */,
+				D7FB3B041E8CE61000B31E1A /* NVActivityIndicatorViewTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +386,10 @@
 					ProjectRef = D72E8A661E7FD05B005D8AAC /* Alamofire.xcodeproj */;
 				},
 				{
+					ProductGroup = D7FB3AF91E8CE61000B31E1A /* Products */;
+					ProjectRef = D7FB3AF81E8CE61000B31E1A /* NVActivityIndicatorView.xcodeproj */;
+				},
+				{
 					ProductGroup = D72E8A721E7FD0AF005D8AAC /* Products */;
 					ProjectRef = D72E8A711E7FD0AF005D8AAC /* SwiftyJSON.xcodeproj */;
 				},
@@ -377,6 +414,27 @@
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
 			remoteRef = D72E8A751E7FD0B0005D8AAC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D7FB3B001E8CE61000B31E1A /* NVActivityIndicatorView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NVActivityIndicatorView.framework;
+			remoteRef = D7FB3AFF1E8CE61000B31E1A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D7FB3B021E8CE61000B31E1A /* NVActivityIndicatorViewDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = NVActivityIndicatorViewDemo.app;
+			remoteRef = D7FB3B011E8CE61000B31E1A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D7FB3B041E8CE61000B31E1A /* NVActivityIndicatorViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NVActivityIndicatorViewTests.xctest;
+			remoteRef = D7FB3B031E8CE61000B31E1A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

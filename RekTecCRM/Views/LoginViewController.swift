@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
     
     @IBOutlet weak var login_button: UIButton!
     @IBOutlet weak var username: UITextField!
@@ -36,17 +37,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         
         // sqlitedb测试
-        var dataInfoTable = [ColumnType]()
-        let col1 = ColumnType(colName: "caption", colType: "varchar(100)", colValue: nil)
-        let col2 = ColumnType(colName: "account", colType: "varchar(100)", colValue: nil)
-        let col3 = ColumnType(colName: "password", colType: "varchar(100)", colValue: nil)
-        let col4 = ColumnType(colName: "iconName", colType: "varchar(100)", colValue: nil)
-        let col5 = ColumnType(colName: "lastEditTime", colType: "datetime", colValue: nil)
-        let col6 = ColumnType(colName: "remark", colType: "varchar(200)", colValue: nil)
-        let col7 = ColumnType(colName: "key", colType: "varchar(100) not null", colValue: nil)
-        let col8 = ColumnType(colName: "indexKey", colType: "int not null", colValue: nil)
-        dataInfoTable += [col1, col2, col3, col4, col5, col6, col7, col8]
-        SQliteRepository.createTable(tableName: SQliteRepository.PASSWORDINFOTABLE, columns: dataInfoTable)
+//        var dataInfoTable = [ColumnType]()
+//        let col1 = ColumnType(colName: "caption", colType: "varchar(100)", colValue: nil)
+//        let col2 = ColumnType(colName: "account", colType: "varchar(100)", colValue: nil)
+//        let col3 = ColumnType(colName: "password", colType: "varchar(100)", colValue: nil)
+//        let col4 = ColumnType(colName: "iconName", colType: "varchar(100)", colValue: nil)
+//        let col5 = ColumnType(colName: "lastEditTime", colType: "datetime", colValue: nil)
+//        let col6 = ColumnType(colName: "remark", colType: "varchar(200)", colValue: nil)
+//        let col7 = ColumnType(colName: "key", colType: "varchar(100) not null", colValue: nil)
+//        let col8 = ColumnType(colName: "indexKey", colType: "int not null", colValue: nil)
+//        dataInfoTable += [col1, col2, col3, col4, col5, col6, col7, col8]
+//        SQliteRepository.createTable(tableName: SQliteRepository.PASSWORDINFOTABLE, columns: dataInfoTable)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -239,6 +240,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // 登录事件
     @IBAction func login_pressed(_ sender: UIButton) {
+        startAnimating(CGSize.init(width: 30, height: 30), message: "正在登录...", type: .ballClipRotateMultiple, color: .black, backgroundColor: .clear)
+        
         self.login_button.isEnabled = false
         self.login_button.setTitle("正在登录...", for: .disabled)
         
@@ -268,7 +271,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             // TODO 更新头像
             self.login_button.setTitle("正在更新头像...", for: .disabled)
             
-            
+            Thread.sleep(forTimeInterval: 10)
+            self.stopAnimating()
             self.performSegue(withIdentifier: "login_segue", sender: nil)
             
             self.login_button.isEnabled = true
