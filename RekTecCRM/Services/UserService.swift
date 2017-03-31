@@ -24,6 +24,7 @@ class UserService{
     // 从服务器获取用户的头像并存入到本地缓存
     class func getUserAvatarFromCloud(systemUserId: String){
         let url = "http://192.168.1.232:7777/api/AvatarFile/GetBase64FileContentByObjectId?moduleType=SystemUser&objectid=\(systemUserId)";
+        AlamofireHeaders.updateHeadersAuth()
         Alamofire.request(url, encoding: JSONEncoding.default, headers: AlamofireHeaders.headers).responseJSON(completionHandler: {
             response in
             switch response.result {

@@ -19,4 +19,7 @@ class AlamofireHeaders{
         "Accept-Encoding": ""
     ]
     
+    class func updateHeadersAuth(){
+        self.headers["Authorization"] = "Basic " + GlobalAppSetting.xrmAuthToken
+    }
 }
