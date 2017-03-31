@@ -19,7 +19,7 @@
 		D715A5B61E8E2BDD009A90F5 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = D715A5AF1E8E2BDD009A90F5 /* SSZipArchive.m */; };
 		D715A5B71E8E2BDD009A90F5 /* SSZipArchive+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715A5B01E8E2BDD009A90F5 /* SSZipArchive+Swift.swift */; };
 		D715A5B91E8E2C32009A90F5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D715A5B81E8E2C32009A90F5 /* libz.tbd */; };
-		D715A5BB1E8E2C75009A90F5 /* MenusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715A5BA1E8E2C75009A90F5 /* MenusService.swift */; };
+		D715A5BB1E8E2C75009A90F5 /* HTMLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715A5BA1E8E2C75009A90F5 /* HTMLService.swift */; };
 		D715A5D31E8E2DF1009A90F5 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = D715A5C01E8E2DF1009A90F5 /* aescrypt.c */; };
 		D715A5D41E8E2DF1009A90F5 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = D715A5C11E8E2DF1009A90F5 /* aeskey.c */; };
 		D715A5D51E8E2DF1009A90F5 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = D715A5C31E8E2DF1009A90F5 /* aestab.c */; };
@@ -50,6 +50,7 @@
 		D766AC321E8CC89600A7A2F4 /* AlamofireHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766AC311E8CC89600A7A2F4 /* AlamofireHeaders.swift */; };
 		D76B303C1E7D516F00DEC7B2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */; };
 		D7733E1C1E7BC5AF00E0AF1F /* GlobalAppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7733E1B1E7BC5AF00E0AF1F /* GlobalAppSetting.swift */; };
+		D77EFBA01E8E3B97004ADFE3 /* MenusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EFB9F1E8E3B97004ADFE3 /* MenusObserver.swift */; };
 		D788E24C1E7943BC00B0DF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D788E24B1E7943BC00B0DF1F /* Assets.xcassets */; };
 		D7CEB3721E77D4EA003FC739 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */; };
 		D7CEB3761E77DA86003FC739 /* AlertControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3731E77DA86003FC739 /* AlertControllerUtils.swift */; };
@@ -132,7 +133,7 @@
 		D715A5B11E8E2BDD009A90F5 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZip/SSZipCommon.h; sourceTree = "<group>"; };
 		D715A5B21E8E2BDD009A90F5 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZip/ZipArchive.h; sourceTree = "<group>"; };
 		D715A5B81E8E2C32009A90F5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		D715A5BA1E8E2C75009A90F5 /* MenusService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenusService.swift; path = Services/MenusService.swift; sourceTree = "<group>"; };
+		D715A5BA1E8E2C75009A90F5 /* HTMLService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTMLService.swift; path = Services/HTMLService.swift; sourceTree = "<group>"; };
 		D715A5BE1E8E2DF1009A90F5 /* aes_via_ace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes_via_ace.h; path = SSZip/aes/aes_via_ace.h; sourceTree = "<group>"; };
 		D715A5BF1E8E2DF1009A90F5 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes.h; path = SSZip/aes/aes.h; sourceTree = "<group>"; };
 		D715A5C01E8E2DF1009A90F5 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aescrypt.c; path = SSZip/aes/aescrypt.c; sourceTree = "<group>"; };
@@ -180,6 +181,7 @@
 		D766AC311E8CC89600A7A2F4 /* AlamofireHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireHeaders.swift; path = Utils/AlamofireHeaders.swift; sourceTree = "<group>"; };
 		D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Base/BaseNavigationController.swift; sourceTree = "<group>"; };
 		D7733E1B1E7BC5AF00E0AF1F /* GlobalAppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalAppSetting.swift; path = Configuration/GlobalAppSetting.swift; sourceTree = "<group>"; };
+		D77EFB9F1E8E3B97004ADFE3 /* MenusObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenusObserver.swift; path = Observer/MenusObserver.swift; sourceTree = "<group>"; };
 		D788E24B1E7943BC00B0DF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageUtils.swift; path = Utils/ImageUtils.swift; sourceTree = "<group>"; };
 		D7CEB3731E77DA86003FC739 /* AlertControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertControllerUtils.swift; path = Utils/AlertControllerUtils.swift; sourceTree = "<group>"; };
@@ -211,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D72E8A8E1E7FD3C2005D8AAC /* AuthenticationService.swift */,
-				D715A5BA1E8E2C75009A90F5 /* MenusService.swift */,
+				D715A5BA1E8E2C75009A90F5 /* HTMLService.swift */,
 				D701374A1E7E9811004986F3 /* UserService.swift */,
 			);
 			name = Services;
@@ -241,6 +243,7 @@
 				D715A5A81E8E2BC6009A90F5 /* SSZip */,
 				D72E8A7D1E7FD18E005D8AAC /* SQLiteDB */,
 				D7733E1A1E7BC56100E0AF1F /* Configuration */,
+				D77EFB9E1E8E3B4D004ADFE3 /* Observer */,
 				D70137491E7E97B8004986F3 /* Services */,
 				D72E8A901E7FD632005D8AAC /* Models */,
 				D73E2D331E7686160096A97A /* Base */,
@@ -401,6 +404,14 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		D77EFB9E1E8E3B4D004ADFE3 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				D77EFB9F1E8E3B97004ADFE3 /* MenusObserver.swift */,
+			);
+			name = Observer;
+			sourceTree = "<group>";
+		};
 		D7CEB3701E77D4CA003FC739 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,7 +569,7 @@
 				D72E8A841E7FD1B5005D8AAC /* SQLiteDB.swift in Sources */,
 				D72E8A861E7FD1B5005D8AAC /* String-Extras.swift in Sources */,
 				D715A5DB1E8E2DF1009A90F5 /* sha1.c in Sources */,
-				D715A5BB1E8E2C75009A90F5 /* MenusService.swift in Sources */,
+				D715A5BB1E8E2C75009A90F5 /* HTMLService.swift in Sources */,
 				D70B22CC1E4DA207008DC4CA /* LoginViewController.swift in Sources */,
 				D715A5D41E8E2DF1009A90F5 /* aeskey.c in Sources */,
 				D715A5E81E8E2DFE009A90F5 /* zip.c in Sources */,
@@ -570,6 +581,7 @@
 				D715A5DA1E8E2DF1009A90F5 /* pwd2key.c in Sources */,
 				D715A5B71E8E2BDD009A90F5 /* SSZipArchive+Swift.swift in Sources */,
 				D70B22C41E4D9C54008DC4CA /* SecondViewController.swift in Sources */,
+				D77EFBA01E8E3B97004ADFE3 /* MenusObserver.swift in Sources */,
 				D715A5E51E8E2DFD009A90F5 /* ioapi.c in Sources */,
 				D7CEB3771E77DA86003FC739 /* DateTimeUtils.swift in Sources */,
 				D72E8A851E7FD1B5005D8AAC /* SQLTable.swift in Sources */,

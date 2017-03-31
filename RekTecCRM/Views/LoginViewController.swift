@@ -240,7 +240,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
     
     // 登录事件
     @IBAction func login_pressed(_ sender: UIButton) {
-        startAnimating(CGSize.init(width: 30, height: 30), message: "正在登录...", type: .ballClipRotateMultiple, color: .black, backgroundColor: .clear)
+        startAnimating(CGSize.init(width: 30, height: 30), message: "正在登录...", type: .ballClipRotateMultiple, color: .gray, backgroundColor: .clear)
         
         self.login_button.isEnabled = false
         self.login_button.setTitle("正在登录...", for: .disabled)
@@ -266,14 +266,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
             
             // TODO 推送注册
             
-            // TODO 更新资源H5
-            self.login_button.setTitle("正在更新资源...", for: .disabled)
-            
             // 更新头像
             self.login_button.setTitle("正在更新头像...", for: .disabled)
             UserService.getUserAvatarFromCloud(systemUserId: GlobalAppSetting.systemUserId)
             
-            Thread.sleep(forTimeInterval: 10)
+            Thread.sleep(forTimeInterval: 3)
+            
             self.stopAnimating()
             self.performSegue(withIdentifier: "login_segue", sender: nil)
             
