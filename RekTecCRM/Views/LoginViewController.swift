@@ -251,26 +251,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
         // TODO 密码需要加密
         authUser.Pwd = password.text!
         
-        AuthenticationService.loginCheck(authenUser: authUser, success: {reponse in
+        AuthenticationService.loginCheck(authenUser: authUser, success: {response in
             GlobalAppSetting.password = self.password.text!
             
-            if reponse["AuthToken"].stringValue.isEmpty || reponse["SystemUserId"].stringValue.isEmpty {
+            if response["AuthToken"].stringValue.isEmpty || response["SystemUserId"].stringValue.isEmpty {
                 self.login_button.isEnabled = true
                 self.login_button.setTitle("登录", for: .normal)
                 return
             }
             
-            GlobalAppSetting.xrmAuthToken = reponse["AuthToken"].stringValue
-            GlobalAppSetting.systemUserId = reponse["SystemUserId"].stringValue
-            GlobalAppSetting.isFirstOpen = reponse["IsLoginFirst"].boolValue
+            GlobalAppSetting.xrmAuthToken = response["AuthToken"].stringValue
+            GlobalAppSetting.systemUserId = response["SystemUserId"].stringValue
+            GlobalAppSetting.isFirstOpen = response["IsLoginFirst"].boolValue
             
             // TODO 推送注册
             
             // TODO 更新资源H5
             self.login_button.setTitle("正在更新资源...", for: .disabled)
             
-            // TODO 更新头像
+            // 更新头像
             self.login_button.setTitle("正在更新头像...", for: .disabled)
+            UserService.getUserAvatarFromCloud(systemUserId: GlobalAppSetting.systemUserId)
             
             Thread.sleep(forTimeInterval: 10)
             self.stopAnimating()
@@ -278,10 +279,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
             
             self.login_button.isEnabled = true
             self.login_button.setTitle("登录", for: .normal)
-        }, failure: {reponse in
+        }, failure: {response in
             self.stopAnimating()
             // TODO登录失败处理
-            print(reponse)
+            print(response)
             self.login_button.isEnabled = true
             self.login_button.setTitle("登录", for: .normal)
         })
