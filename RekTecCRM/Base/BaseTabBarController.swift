@@ -16,7 +16,7 @@ class BaseTabBarController: UITabBarController, NVActivityIndicatorViewable {
         // Do any additional setup after loading the view, typically from a nib.
         
         // 同步锁
-        DispatchQueue(label: "").sync() {
+        DispatchQueue(label: "test1").sync() {
             startAnimating(CGSize.init(width: 30, height: 30), type: .ballTrianglePath, color: .gray, backgroundColor: .clear)
             // TODO 更新资源H5
             HTMLService.upgradeHTML()

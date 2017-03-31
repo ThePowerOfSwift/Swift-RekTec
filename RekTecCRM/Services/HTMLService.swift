@@ -25,16 +25,18 @@ class HTMLService{
             response in
             switch response.result {
             case .success(let value):
-                let json = JSON(value)
-                print(json)
-                if json == JSON.null || !json["IsUpdate"].boolValue{
-                    return
-                }
-                // 下载HTML的压缩包
-                let downloadUrl = "http://192.168.1.232:7777/FileDownloadHandler.ashx?moduletype=version&fileid=\(json["FileId"])"
-                Alamofire.download(downloadUrl).responseData { response in
-                    if let data = response.result.value {
-                        print(data)
+                // 同步锁
+                DispatchQueue(label: "test2").sync() {
+                    let json = JSON(value)
+                    print(json)
+                    if json == JSON.null || !json["IsUpdate"].boolValue{
+                        return
+                    }
+                    // 下载HTML的压缩包
+                    let downloadUrl = "http://192.168.1.232:7777/FileDownloadHandler.ashx?moduletype=version&fileid=\(json["FileId"])"
+                    Alamofire.download(downloadUrl).responseData { response in
+                        print(response)
+                        // TODO 把Data写到目标目录的文件中
                     }
                 }
             case .failure(let error):
