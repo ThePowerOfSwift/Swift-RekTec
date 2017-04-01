@@ -121,4 +121,16 @@ class GlobalAppSetting{
             UserDefaults.standard.synchronize()
         }
     }
+    
+    // 菜单的同步时间
+    static var lastSyncTimeForMenus: String{
+        get{
+            let v = UserDefaults.standard.value(forKey: "lastSyncTimeForMenus")
+            return v == nil ? "" : v as! String
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "lastSyncTimeForMenus")
+            UserDefaults.standard.synchronize()
+        }
+    }
 }
