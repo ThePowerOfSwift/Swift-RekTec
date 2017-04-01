@@ -54,6 +54,7 @@
 		D7A1748A1E8F871200D4C719 /* MenusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A174891E8F871200D4C719 /* MenusRepository.swift */; };
 		D7A1748C1E8F875300D4C719 /* SQliteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1748B1E8F875300D4C719 /* SQliteRepository.swift */; };
 		D7A1748E1E8F903F00D4C719 /* MenusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1748D1E8F903F00D4C719 /* MenusService.swift */; };
+		D7A174901E8F9A4F00D4C719 /* SystemMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1748F1E8F9A4F00D4C719 /* SystemMenus.swift */; };
 		D7CEB3721E77D4EA003FC739 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */; };
 		D7CEB3761E77DA86003FC739 /* AlertControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3731E77DA86003FC739 /* AlertControllerUtils.swift */; };
 		D7CEB3771E77DA86003FC739 /* DateTimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CEB3741E77DA86003FC739 /* DateTimeUtils.swift */; };
@@ -187,6 +188,7 @@
 		D7A174891E8F871200D4C719 /* MenusRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenusRepository.swift; path = Repository/MenusRepository.swift; sourceTree = "<group>"; };
 		D7A1748B1E8F875300D4C719 /* SQliteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQliteRepository.swift; path = Repository/SQliteRepository.swift; sourceTree = "<group>"; };
 		D7A1748D1E8F903F00D4C719 /* MenusService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenusService.swift; path = Services/MenusService.swift; sourceTree = "<group>"; };
+		D7A1748F1E8F9A4F00D4C719 /* SystemMenus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemMenus.swift; path = Models/SystemMenus.swift; sourceTree = "<group>"; };
 		D7CEB3711E77D4EA003FC739 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageUtils.swift; path = Utils/ImageUtils.swift; sourceTree = "<group>"; };
 		D7CEB3731E77DA86003FC739 /* AlertControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertControllerUtils.swift; path = Utils/AlertControllerUtils.swift; sourceTree = "<group>"; };
 		D7CEB3741E77DA86003FC739 /* DateTimeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateTimeUtils.swift; path = Utils/DateTimeUtils.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				D72E8A911E7FD6BA005D8AAC /* AuthenUser.swift */,
+				D7A1748F1E8F9A4F00D4C719 /* SystemMenus.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				D715A5D31E8E2DF1009A90F5 /* aescrypt.c in Sources */,
 				D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */,
 				D715A5B61E8E2BDD009A90F5 /* SSZipArchive.m in Sources */,
+				D7A174901E8F9A4F00D4C719 /* SystemMenus.swift in Sources */,
 				D7CEB3721E77D4EA003FC739 /* ImageUtils.swift in Sources */,
 				D715A5D91E8E2DF1009A90F5 /* prng.c in Sources */,
 				D715A5E71E8E2DFE009A90F5 /* unzip.c in Sources */,

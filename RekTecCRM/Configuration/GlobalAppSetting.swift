@@ -133,4 +133,16 @@ class GlobalAppSetting{
             UserDefaults.standard.synchronize()
         }
     }
+    
+    // 菜单的样式
+    static var systemMenuStyle: String{
+        get{
+            let v = UserDefaults.standard.value(forKey: "systemMenuStyle")
+            return v == nil ? "1" : v as! String
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "systemMenuStyle")
+            UserDefaults.standard.synchronize()
+        }
+    }
 }

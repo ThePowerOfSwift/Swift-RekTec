@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
+// 登录Model
 class AuthenUser{
-    var uid: String
-    var pwd: String
-    let pluginKey: String = "LoginLog"
-    var pluginContent: String
+    private var uid: String
+    private var pwd: String
+    private let pluginKey: String = "LoginLog"
+    private var pluginContent: String
     
     init() {
         let LoginLogId = UUID().uuidString.lowercased()

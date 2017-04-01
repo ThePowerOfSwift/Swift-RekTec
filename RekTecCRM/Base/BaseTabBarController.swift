@@ -18,9 +18,8 @@ class BaseTabBarController: UITabBarController, NVActivityIndicatorViewable {
 //            startAnimating(CGSize.init(width: 30, height: 30), type: .ballTrianglePath, color: .gray, backgroundColor: .clear)
             // 更新资源H5
             HTMLService.upgradeHTML()
-            
-            // TODO 更新菜单
-            print("Menus")
+            // 更新菜单
+            MenusService.getSystemMenusFromCloud(lastUpdateTime: GlobalAppSetting.lastSyncTimeForMenus)
 //            self.stopAnimating()
         }
     }
