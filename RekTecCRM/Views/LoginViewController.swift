@@ -39,6 +39,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
         // 初始化本地数据库
         MenusRepository.createParentMenusTable()
         MenusRepository.createChildMenusTable()
+        
+        GlobalAppSetting.lastSyncTimeForMenus = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {

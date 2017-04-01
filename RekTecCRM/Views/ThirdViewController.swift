@@ -12,9 +12,12 @@ class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        print("This is Third View")
+        print("应用Tab")
+        let systemMenus1 = MenusRepository.getSystemMenusFromDb1()
+        print(systemMenus1)
+//        let systemMenus = MenusRepository.getSystemMenusFromDb()
+//        print(systemMenus)
     }
 
     override func didReceiveMemoryWarning() {

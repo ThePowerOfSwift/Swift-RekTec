@@ -13,8 +13,8 @@ import UIKit
 class AuthenUser{
     private var uid: String
     private var pwd: String
-    private let pluginKey: String = "LoginLog"
-    private var pluginContent: String
+    let pluginKey: String = "LoginLog"
+    var pluginContent: String
     
     init() {
         let LoginLogId = UUID().uuidString.lowercased()

@@ -150,7 +150,7 @@
         <!--应用-->
         <scene sceneID="oct-e8-JZf">
             <objects>
-                <viewController id="Pkg-1u-zCA" customClass="FouthViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pkg-1u-zCA" customClass="ThirdViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="duy-OA-ceZ"/>
                         <viewControllerLayoutGuide type="bottom" id="NHH-LJ-wur"/>
@@ -197,7 +197,7 @@
         <!--我-->
         <scene sceneID="UrF-lj-dZk">
             <objects>
-                <viewController id="eyV-SR-foT" customClass="ThirdViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eyV-SR-foT" customClass="FouthViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bd1-wP-14h"/>
                         <viewControllerLayoutGuide type="bottom" id="MSh-Qm-3MZ"/>

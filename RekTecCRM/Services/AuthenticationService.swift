@@ -17,8 +17,8 @@ class AuthenticationService {
     class func loginCheck(authenUser: AuthenUser, success: @escaping(JSON) -> Void, failure: @escaping(Any) -> Void){
         let url = "http://192.168.1.232:7777/api/Authentication/login"
         let parameters: Parameters = [
-            "uid": authenUser.uid,
-            "pwd": authenUser.pwd,
+            "uid": authenUser.Uid,
+            "pwd": authenUser.Pwd,
             "pluginKey": authenUser.pluginKey,
             "pluginContent": authenUser.pluginContent
         ]
