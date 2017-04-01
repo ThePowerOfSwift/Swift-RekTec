@@ -10,9 +10,6 @@ import Foundation
 
 // SQlite数据库操作类
 class SQliteRepository {
-    
-    public static let PASSWORDINFOTABLE: String = "dataInfoTable"
-    
     private static var db: SQLiteDB! = SQLiteDB.sharedInstance
     
     // 创建表
