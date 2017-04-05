@@ -11,7 +11,7 @@ import Foundation
 // 系统菜单Model
 class SystemMenus{
     private var fontIcon: String, menuIcon: String, menuType: String, systemMenuId: String, parentMenuCode: String
-    private var parentMenuId: String, menuCode: String, menuName: String
+    private var parentMenuId: String, menuCode: String, menuName: String, menuUrl: String
     private var isActive: Int, menuSeq: Int
     
     init(){
@@ -25,6 +25,16 @@ class SystemMenus{
         self.menuName = ""
         self.isActive = -1
         self.menuSeq = -1
+        self.menuUrl = ""
+    }
+    
+    var MenuUrl: String{
+        get{
+            return self.menuUrl
+        }
+        set{
+            self.menuUrl = newValue
+        }
     }
     
     var FontIcon: String{

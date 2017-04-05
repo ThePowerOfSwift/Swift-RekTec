@@ -23,6 +23,7 @@ class MenusService{
                 switch response.result {
                 case .success(let value):
                     let systemMenuList = JSON(value)
+                    print(systemMenuList)
                     GlobalAppSetting.lastSyncTimeForMenus = systemMenuList["SystemMenuSyncTime"].stringValue
                     GlobalAppSetting.systemMenuStyle = systemMenuList["SystemMenuStyle"].stringValue
                     
@@ -43,6 +44,7 @@ class MenusService{
                             pmenu.ParentMenuCode = menus["ParentMenuCode"].stringValue
                             pmenu.ParentMenuId = menus["ParentMenuId"].stringValue
                             pmenu.SystemMenuId = menus["SystemMenuId"].stringValue
+                            pmenu.MenuUrl = menus["MenuUrl"].stringValue
                             parentSystemMenus += [pmenu]
                             
                             if menus["Children"] == JSON.null || menus["Children"].count <= 0 {
@@ -61,6 +63,7 @@ class MenusService{
                                 cmenu.ParentMenuCode = childMenus["ParentMenuCode"].stringValue
                                 cmenu.ParentMenuId = childMenus["ParentMenuId"].stringValue
                                 cmenu.SystemMenuId = childMenus["SystemMenuId"].stringValue
+                                cmenu.MenuUrl = childMenus["MenuUrl"].stringValue
                                 childSystemMenus += [cmenu]
                             }
                         }
