@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  RekTecCRM
 //
 //  Created by Channing on 2017/2/10.
@@ -8,15 +8,13 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ContactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print("This is First View")
-        
-        FileUtils.saveBase64StringToCache(id: "1234567890", content: "Hello World")
+        print("This is Second View")
     }
 
     override func didReceiveMemoryWarning() {

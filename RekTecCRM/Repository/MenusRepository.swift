@@ -40,6 +40,9 @@ class MenusRepository{
     
     // 插入或更新菜单缓存
     class func insertOrUpdateTable(parentMenus: [SystemMenus], childMenus: [SystemMenus]){
+        _ = SQliteRepository.deleteAll(tableName: PARENTMENUSTABLE)
+        _ = SQliteRepository.deleteAll(tableName: CHILDMENUSTABLE)
+        
         var _fontIcon = ColumnType(colName: "FontIcon", colType: nil, colValue: nil)
         var _menuIcon = ColumnType(colName: "MenuIcon", colType: nil, colValue: nil)
         var _menuType = ColumnType(colName: "MenuType", colType: nil, colValue: nil)
@@ -54,6 +57,7 @@ class MenusRepository{
         
         var parentMenuTable = [ColumnType](), childMenuTable = [ColumnType]()
         var parentMenusTable = [[ColumnType]](), childMenusTable = [[ColumnType]]()
+        
         for pmenu in parentMenus {
             _fontIcon.colValue = pmenu.FontIcon
             _menuIcon.colValue = pmenu.MenuIcon
@@ -66,7 +70,7 @@ class MenusRepository{
             _menuCode.colValue = pmenu.MenuCode
             _menuName.colValue = pmenu.MenuName
             _menuUrl.colValue = pmenu.MenuUrl
-            parentMenuTable += [_fontIcon, _menuIcon, _menuType, _isActive, _systemMenuId, _parentMenuCode, _parentMenuId, _menuSeq, _menuCode, _menuName]
+            parentMenuTable += [_fontIcon, _menuIcon, _menuType, _isActive, _systemMenuId, _parentMenuCode, _parentMenuId, _menuSeq, _menuCode, _menuName, _menuUrl]
             parentMenusTable += [parentMenuTable]
             parentMenuTable.removeAll()
         }
@@ -83,8 +87,8 @@ class MenusRepository{
             _menuCode.colValue = cmenu.MenuCode
             _menuName.colValue = cmenu.MenuName
             _menuUrl.colValue = cmenu.MenuUrl
-            childMenuTable += [_fontIcon, _menuIcon, _menuType, _isActive, _systemMenuId, _parentMenuCode, _parentMenuId, _menuSeq, _menuCode, _menuName]
-            childMenusTable += [parentMenuTable]
+            childMenuTable += [_fontIcon, _menuIcon, _menuType, _isActive, _systemMenuId, _parentMenuCode, _parentMenuId, _menuSeq, _menuCode, _menuName, _menuUrl]
+            childMenusTable += [childMenuTable]
             childMenuTable.removeAll()
         }
         _ = SQliteRepository.syncInsert(tableName: CHILDMENUSTABLE, rowValue: childMenusTable)
@@ -95,9 +99,5 @@ class MenusRepository{
     // 从本地数据库获取菜单用于显示在界面上
     class func getSystemMenusFromDb() -> [[String: Any]] {
         return SQliteRepository.getData(tableName: CHILDMENUSTABLE)
-    }
-    
-    class func getSystemMenusFromDb1() -> [[String: Any]] {
-        return SQliteRepository.getData(tableName: PARENTMENUSTABLE)
     }
 }

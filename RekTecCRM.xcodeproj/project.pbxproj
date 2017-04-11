@@ -10,10 +10,10 @@
 		D701374B1E7E9811004986F3 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D701374A1E7E9811004986F3 /* UserService.swift */; };
 		D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22AC1E4D86BD008DC4CA /* AppDelegate.swift */; };
 		D70B22B41E4D86BD008DC4CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70B22B21E4D86BD008DC4CA /* Main.storyboard */; };
-		D70B22C21E4D9C4C008DC4CA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C11E4D9C4C008DC4CA /* FirstViewController.swift */; };
-		D70B22C41E4D9C54008DC4CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C31E4D9C54008DC4CA /* SecondViewController.swift */; };
-		D70B22C71E4DA054008DC4CA /* FouthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C51E4DA054008DC4CA /* FouthViewController.swift */; };
-		D70B22C81E4DA054008DC4CA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C61E4DA054008DC4CA /* ThirdViewController.swift */; };
+		D70B22C21E4D9C4C008DC4CA /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C11E4D9C4C008DC4CA /* MessageViewController.swift */; };
+		D70B22C41E4D9C54008DC4CA /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C31E4D9C54008DC4CA /* ContactViewController.swift */; };
+		D70B22C71E4DA054008DC4CA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C51E4DA054008DC4CA /* ProfileViewController.swift */; };
+		D70B22C81E4DA054008DC4CA /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22C61E4DA054008DC4CA /* ApplicationViewController.swift */; };
 		D70B22CC1E4DA207008DC4CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */; };
 		D715A5B51E8E2BDD009A90F5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D715A5AD1E8E2BDD009A90F5 /* Info.plist */; };
 		D715A5B61E8E2BDD009A90F5 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = D715A5AF1E8E2BDD009A90F5 /* SSZipArchive.m */; };
@@ -124,10 +124,10 @@
 		D70B22AC1E4D86BD008DC4CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70B22B31E4D86BD008DC4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D70B22BA1E4D86BD008DC4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D70B22C11E4D9C4C008DC4CA /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = Views/FirstViewController.swift; sourceTree = "<group>"; };
-		D70B22C31E4D9C54008DC4CA /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = Views/SecondViewController.swift; sourceTree = "<group>"; };
-		D70B22C51E4DA054008DC4CA /* FouthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FouthViewController.swift; path = Views/FouthViewController.swift; sourceTree = "<group>"; };
-		D70B22C61E4DA054008DC4CA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdViewController.swift; path = Views/ThirdViewController.swift; sourceTree = "<group>"; };
+		D70B22C11E4D9C4C008DC4CA /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Views/MessageViewController.swift; sourceTree = "<group>"; };
+		D70B22C31E4D9C54008DC4CA /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactViewController.swift; path = Views/ContactViewController.swift; sourceTree = "<group>"; };
+		D70B22C51E4DA054008DC4CA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Views/ProfileViewController.swift; sourceTree = "<group>"; };
+		D70B22C61E4DA054008DC4CA /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationViewController.swift; path = Views/ApplicationViewController.swift; sourceTree = "<group>"; };
 		D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Views/LoginViewController.swift; sourceTree = "<group>"; };
 		D715A5AD1E8E2BDD009A90F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SSZip/Info.plist; sourceTree = "<group>"; };
 		D715A5AE1E8E2BDD009A90F5 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZip/SSZipArchive.h; sourceTree = "<group>"; };
@@ -271,10 +271,10 @@
 			isa = PBXGroup;
 			children = (
 				D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */,
-				D70B22C11E4D9C4C008DC4CA /* FirstViewController.swift */,
-				D70B22C31E4D9C54008DC4CA /* SecondViewController.swift */,
-				D70B22C61E4DA054008DC4CA /* ThirdViewController.swift */,
-				D70B22C51E4DA054008DC4CA /* FouthViewController.swift */,
+				D70B22C11E4D9C4C008DC4CA /* MessageViewController.swift */,
+				D70B22C31E4D9C54008DC4CA /* ContactViewController.swift */,
+				D70B22C61E4DA054008DC4CA /* ApplicationViewController.swift */,
+				D70B22C51E4DA054008DC4CA /* ProfileViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -599,7 +599,7 @@
 				D715A5B71E8E2BDD009A90F5 /* SSZipArchive+Swift.swift in Sources */,
 				D7A1748C1E8F875300D4C719 /* SQliteRepository.swift in Sources */,
 				D7A1748A1E8F871200D4C719 /* MenusRepository.swift in Sources */,
-				D70B22C41E4D9C54008DC4CA /* SecondViewController.swift in Sources */,
+				D70B22C41E4D9C54008DC4CA /* ContactViewController.swift in Sources */,
 				D77EFBA01E8E3B97004ADFE3 /* MenusObserver.swift in Sources */,
 				D715A5E51E8E2DFD009A90F5 /* ioapi.c in Sources */,
 				D7CEB3771E77DA86003FC739 /* DateTimeUtils.swift in Sources */,
@@ -607,17 +607,17 @@
 				D715A5D51E8E2DF1009A90F5 /* aestab.c in Sources */,
 				D7CEB37C1E77DA98003FC739 /* NSObjectExtension.swift in Sources */,
 				D715A5D71E8E2DF1009A90F5 /* fileenc.c in Sources */,
-				D70B22C71E4DA054008DC4CA /* FouthViewController.swift in Sources */,
+				D70B22C71E4DA054008DC4CA /* ProfileViewController.swift in Sources */,
 				D701374B1E7E9811004986F3 /* UserService.swift in Sources */,
 				D7D97C941E7A29CB001FA3D6 /* FileUtils.swift in Sources */,
 				D766AC321E8CC89600A7A2F4 /* AlamofireHeaders.swift in Sources */,
-				D70B22C81E4DA054008DC4CA /* ThirdViewController.swift in Sources */,
+				D70B22C81E4DA054008DC4CA /* ApplicationViewController.swift in Sources */,
 				D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */,
 				D7CEB37B1E77DA98003FC739 /* NSDateExtension.swift in Sources */,
 				D76B303C1E7D516F00DEC7B2 /* BaseNavigationController.swift in Sources */,
 				D7A1748E1E8F903F00D4C719 /* MenusService.swift in Sources */,
 				D7CEB3781E77DA86003FC739 /* TouchIDUtils.swift in Sources */,
-				D70B22C21E4D9C4C008DC4CA /* FirstViewController.swift in Sources */,
+				D70B22C21E4D9C4C008DC4CA /* MessageViewController.swift in Sources */,
 				D715A5D81E8E2DF1009A90F5 /* hmac.c in Sources */,
 				D72E8A8F1E7FD3C2005D8AAC /* AuthenticationService.swift in Sources */,
 				D715A5E61E8E2DFE009A90F5 /* mztools.c in Sources */,

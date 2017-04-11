@@ -56,8 +56,8 @@ class HTMLService{
                                 // 更新本地www版本号
                                 GlobalAppSetting.wwwVersion = json["VersionCode"].stringValue
                                 // 查看存放HTML目录中的文件
-                                let contentsOfPath = try? manager.contentsOfDirectory(atPath: wwwPath)
-                                print("contentsOfPath: \(contentsOfPath)")
+                                // let contentsOfPath = try? manager.contentsOfDirectory(atPath: wwwPath)
+                                // print("contentsOfPath: \(contentsOfPath)")
                             })
                         }
                     })

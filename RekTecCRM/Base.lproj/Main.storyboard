@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vQ0-FA-Cr6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vQ0-FA-Cr6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -103,7 +103,7 @@
         <!--通讯录-->
         <scene sceneID="j9d-7q-6QQ">
             <objects>
-                <viewController id="NQq-hU-Udy" customClass="SecondViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NQq-hU-Udy" customClass="ContactViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bqS-fS-e4K"/>
                         <viewControllerLayoutGuide type="bottom" id="i6c-9K-3hj"/>
@@ -150,7 +150,7 @@
         <!--应用-->
         <scene sceneID="oct-e8-JZf">
             <objects>
-                <viewController id="Pkg-1u-zCA" customClass="ThirdViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pkg-1u-zCA" customClass="ApplicationViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="duy-OA-ceZ"/>
                         <viewControllerLayoutGuide type="bottom" id="NHH-LJ-wur"/>
@@ -159,23 +159,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="应用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXf-QT-M2m">
-                                <rect key="frame" x="178" y="323" width="35" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpI-Jd-NVb">
+                                <rect key="frame" x="0.0" y="200" width="375" height="417"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_avatar_default" translatesAutoresizingMaskIntoConstraints="NO" id="UMP-Ja-Icc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="136"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="应用" id="Ca5-NP-KPw">
                         <barButtonItem key="backBarButtonItem" title="Back" id="SFx-hW-jUl"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="banaImage" destination="UMP-Ja-Icc" id="lec-57-oTW"/>
+                        <outlet property="scrollView" destination="EpI-Jd-NVb" id="Fcg-mA-gHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsZ-ud-jwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="309"/>
+            <point key="canvasLocation" x="1984.8" y="308.9955022488756"/>
         </scene>
         <!--我-->
         <scene sceneID="OAB-pd-3pj">
@@ -197,7 +202,7 @@
         <!--我-->
         <scene sceneID="UrF-lj-dZk">
             <objects>
-                <viewController id="eyV-SR-foT" customClass="FouthViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eyV-SR-foT" customClass="ProfileViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bd1-wP-14h"/>
                         <viewControllerLayoutGuide type="bottom" id="MSh-Qm-3MZ"/>
@@ -268,7 +273,7 @@
         <!--消息-->
         <scene sceneID="Qas-pJ-qQn">
             <objects>
-                <viewController id="ZvW-nw-bCf" customClass="FirstViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZvW-nw-bCf" customClass="MessageViewController" customModule="RekTecCRM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ms6-cd-rNc"/>
                         <viewControllerLayoutGuide type="bottom" id="LTe-gK-hmk"/>
@@ -298,6 +303,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="login_avatar_default" width="75" height="75"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  RekTecCRM
 //
 //  Created by Channing on 2017/2/10.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class FouthViewController: UIViewController {
+class MessageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print("This is Fouth View")
+        print("This is First View")
     }
 
     override func didReceiveMemoryWarning() {

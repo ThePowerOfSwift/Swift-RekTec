@@ -23,7 +23,7 @@ class MenusService{
                 switch response.result {
                 case .success(let value):
                     let systemMenuList = JSON(value)
-                    print(systemMenuList)
+                    // print(systemMenuList)
                     GlobalAppSetting.lastSyncTimeForMenus = systemMenuList["SystemMenuSyncTime"].stringValue
                     GlobalAppSetting.systemMenuStyle = systemMenuList["SystemMenuStyle"].stringValue
                     
