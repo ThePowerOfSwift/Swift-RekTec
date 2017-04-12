@@ -163,9 +163,9 @@
                                 <rect key="frame" x="0.0" y="200" width="375" height="417"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_avatar_default" translatesAutoresizingMaskIntoConstraints="NO" id="UMP-Ja-Icc">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crm_banner" translatesAutoresizingMaskIntoConstraints="NO" id="UMP-Ja-Icc">
                                 <rect key="frame" x="0.0" y="64" width="375" height="136"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,8 +302,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="crm_banner" width="375" height="150"/>
         <image name="first" width="30" height="30"/>
-        <image name="login_avatar_default" width="75" height="75"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
