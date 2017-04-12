@@ -76,7 +76,8 @@ class ApplicationViewController: UIViewController {
             buttonLabel.font = UIFont.systemFont(ofSize: 14)
             button.addSubview(buttonLabel)
             
-            // TODO 绑定菜单的点击事件
+            // 绑定菜单的点击事件
+            button.addTarget(self, action:#selector(menuTouchUpInside), for:.touchUpInside)
             
             scrollView.addSubview(button)
             
@@ -89,8 +90,9 @@ class ApplicationViewController: UIViewController {
         scrollView.contentSize = CGSize.init(width: 0, height: row * menuButtonHeight)
     }
     
+    // 菜单点击绑定
     func menuTouchUpInside(){
-        
+        self.navigationController?.pushViewController(WebViewController(nibName: nil, bundle: nil), animated: true)
     }
 
     override func didReceiveMemoryWarning() {

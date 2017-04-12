@@ -33,6 +33,8 @@
 		D715A5E61E8E2DFE009A90F5 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = D715A5DF1E8E2DFD009A90F5 /* mztools.c */; };
 		D715A5E71E8E2DFE009A90F5 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = D715A5E11E8E2DFD009A90F5 /* unzip.c */; };
 		D715A5E81E8E2DFE009A90F5 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = D715A5E31E8E2DFD009A90F5 /* zip.c */; };
+		D72C0E631E9E0A280069C49B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C0E621E9E0A280069C49B /* WebViewController.swift */; };
+		D72C0E671E9E14BA0069C49B /* _blank.html in Resources */ = {isa = PBXBuildFile; fileRef = D72C0E661E9E14BA0069C49B /* _blank.html */; };
 		D72E8A6D1E7FD069005D8AAC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72E8A6C1E7FD05B005D8AAC /* Alamofire.framework */; };
 		D72E8A6E1E7FD069005D8AAC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D72E8A6C1E7FD05B005D8AAC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D72E8A771E7FD0BC005D8AAC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72E8A761E7FD0B0005D8AAC /* SwiftyJSON.framework */; };
@@ -167,6 +169,8 @@
 		D715A5E21E8E2DFD009A90F5 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZip/minizip/unzip.h; sourceTree = "<group>"; };
 		D715A5E31E8E2DFD009A90F5 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zip.c; path = SSZip/minizip/zip.c; sourceTree = "<group>"; };
 		D715A5E41E8E2DFD009A90F5 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZip/minizip/zip.h; sourceTree = "<group>"; };
+		D72C0E621E9E0A280069C49B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Views/WebViewController.swift; sourceTree = "<group>"; };
+		D72C0E661E9E14BA0069C49B /* _blank.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = _blank.html; sourceTree = "<group>"; };
 		D72E8A661E7FD05B005D8AAC /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Libraries/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		D72E8A711E7FD0AF005D8AAC /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "Libraries/SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 		D72E8A7E1E7FD1B5005D8AAC /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "SQliteDB/Bridging-Header.h"; sourceTree = "<group>"; };
@@ -270,11 +274,13 @@
 		D70B22C01E4D9C38008DC4CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D72C0E661E9E14BA0069C49B /* _blank.html */,
 				D70B22CB1E4DA207008DC4CA /* LoginViewController.swift */,
 				D70B22C11E4D9C4C008DC4CA /* MessageViewController.swift */,
 				D70B22C31E4D9C54008DC4CA /* ContactViewController.swift */,
 				D70B22C61E4DA054008DC4CA /* ApplicationViewController.swift */,
 				D70B22C51E4DA054008DC4CA /* ProfileViewController.swift */,
+				D72C0E621E9E0A280069C49B /* WebViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				D788E24C1E7943BC00B0DF1F /* Assets.xcassets in Resources */,
 				D70B22B41E4D86BD008DC4CA /* Main.storyboard in Resources */,
 				D715A5B51E8E2BDD009A90F5 /* Info.plist in Resources */,
+				D72C0E671E9E14BA0069C49B /* _blank.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +620,7 @@
 				D766AC321E8CC89600A7A2F4 /* AlamofireHeaders.swift in Sources */,
 				D70B22C81E4DA054008DC4CA /* ApplicationViewController.swift in Sources */,
 				D70B22AD1E4D86BD008DC4CA /* AppDelegate.swift in Sources */,
+				D72C0E631E9E0A280069C49B /* WebViewController.swift in Sources */,
 				D7CEB37B1E77DA98003FC739 /* NSDateExtension.swift in Sources */,
 				D76B303C1E7D516F00DEC7B2 /* BaseNavigationController.swift in Sources */,
 				D7A1748E1E8F903F00D4C719 /* MenusService.swift in Sources */,
