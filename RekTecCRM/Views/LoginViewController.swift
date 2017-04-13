@@ -263,7 +263,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
             self.login_button.setTitle("正在更新头像...", for: .disabled)
             UserService.getUserAvatarFromCloud(systemUserId: GlobalAppSetting.systemUserId)
             
-            Thread.sleep(forTimeInterval: 3)
+//            Thread.sleep(forTimeInterval: 3)
             
             self.stopAnimating()
             self.performSegue(withIdentifier: "login_segue", sender: nil)

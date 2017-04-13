@@ -17,6 +17,8 @@ class ApplicationViewController: UIViewController {
     private let metroMenuPadding: CGFloat = 20
     private let metroMenuIconWidth: CGFloat = 42
     
+    private var menuUrls: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +46,7 @@ class ApplicationViewController: UIViewController {
         var col: CGFloat = 0
         var row: CGFloat = 0
         
-        for menu in menus {
+        for (index, menu) in menus.enumerated() {
             let button = UIButton.init(type: .custom)
             button.frame = CGRect.init(x: col * menuButtonWidth, y: row * menuButtonHeight, width: menuButtonWidth, height: menuButtonHeight)
             button.backgroundColor = .clear
@@ -75,9 +77,11 @@ class ApplicationViewController: UIViewController {
             buttonLabel.textAlignment = .center
             buttonLabel.font = UIFont.systemFont(ofSize: 14)
             button.addSubview(buttonLabel)
+            button.tag = index
             
             // 绑定菜单的点击事件
-            button.addTarget(self, action:#selector(menuTouchUpInside), for:.touchUpInside)
+            menuUrls.append( menu["MenuUrl"] as! String)
+            button.addTarget(self, action: #selector(menuTouchUpInside(_:)), for: .touchUpInside)
             
             scrollView.addSubview(button)
             
@@ -91,8 +95,11 @@ class ApplicationViewController: UIViewController {
     }
     
     // 菜单点击绑定
-    func menuTouchUpInside(){
-        self.navigationController?.pushViewController(WebViewController(nibName: nil, bundle: nil), animated: true)
+    func menuTouchUpInside(_ button: UIButton){
+        let menuUrl = menuUrls[button.tag]
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(WebViewController(menuUrl: menuUrl), animated: true)
+        self.hidesBottomBarWhenPushed = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,15 +107,3 @@ class ApplicationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

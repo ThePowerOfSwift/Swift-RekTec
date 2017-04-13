@@ -12,9 +12,11 @@ import UIKit
 class WebViewController: UIViewController{
     
     private var webview: UIWebView!
+    var menuUrl: String? = ""
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    init(menuUrl: String) {
+        self.menuUrl = menuUrl
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,6 +26,8 @@ class WebViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         webview = UIWebView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         
         let fileManager = FileManager.default
@@ -32,21 +36,21 @@ class WebViewController: UIViewController{
             try! fileManager.createDirectory(atPath: wwwPath, withIntermediateDirectories: true, attributes: nil)
         }
 //        let srcUrl = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/_index.html"
-        let toUrl = wwwPath + "/_index.html"
+        let toUrl = wwwPath + "/index.html"
 //        try! fileManager.copyItem(atPath: srcUrl, toPath: toUrl)
         
 //        webview.performSelector(onMainThread: {() -> Void in }, with: nil, waitUntilDone: true)
         
-        let url = toUrl + "#/app/login"
+        let url = toUrl + "#/" + menuUrl!
         webview.loadRequest(URLRequest.init(url: URL.init(string: url)!))
         
 //        let a = "window.location.href='index.html';"
 //        webview.stringByEvaluatingJavaScript(from: a)
+        self.view.addSubview(webview)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
