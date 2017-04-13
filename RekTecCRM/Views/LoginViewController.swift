@@ -266,6 +266,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
 //            Thread.sleep(forTimeInterval: 3)
             
             self.stopAnimating()
+            GlobalAppSetting.xrmWebApiBaseUrl = "http://192.168.1.232:7777/"
             self.performSegue(withIdentifier: "login_segue", sender: nil)
             
             self.login_button.isEnabled = true
