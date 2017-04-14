@@ -16,8 +16,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var remember_password: UISwitch!
     @IBOutlet weak var remember_password_label: UILabel!
+    @IBOutlet weak var set_server: UIButton!
     
     var avatar: UIImageView!
+    
+    var serverAddress: ServerAddressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
         setUserNameTextField()
         setPasswordTextField()
         setRememberPassword()
+        setServerAddress()
         setLoginButton()
         
         username.delegate = self
@@ -39,8 +43,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
         // 初始化本地数据库
         MenusRepository.createParentMenusTable()
         MenusRepository.createChildMenusTable()
-        
-        GlobalAppSetting.lastSyncTimeForMenus = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -192,6 +194,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
     func setRememberPassword(){
         let top = self.view.bounds.height / 4 + 40 + 60 + 10 + 60 + 20
         let textString = remember_password_label.text
+        // 字符串所占像素的大小
         let size = textString?.size(attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 14)])
         
         remember_password_label.frame = CGRect.init(x: 20, y: top, width: size!.width, height: 20)
@@ -212,6 +215,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
             GlobalAppSetting.password = ""
         }
     }
+    
+    // 设置服务器
+    func setServerAddress(){
+        let top = self.view.bounds.height / 4 + 40 + 60 + 10 + 60 + 20
+        set_server.frame = CGRect.init(x: self.view.bounds.width - 100, y: top, width: 100, height: 20)
+    }
+    
+    // 设置服务器
+    @IBAction func set_server_click(_ sender: UIButton) {
+        serverAddress = ServerAddressView(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height), target: self, action: #selector(closeServerSettingView(_:)))
+        
+        self.view.addSubview(serverAddress.View)
+        
+        self.serverAddress.View.frame.origin.y = self.view.bounds.height
+        UIView.animate(withDuration: 0.3, animations: {
+            _ in
+            self.serverAddress.View.frame.origin.y = 0
+        })
+    }
+    func closeServerSettingView(_ button: UIButton){
+        self.serverAddress.View.removeFromSuperview()
+    }
+    
     // 登录按钮
     func setLoginButton(){
         let left = (self.view.bounds.width - 135) / 2
