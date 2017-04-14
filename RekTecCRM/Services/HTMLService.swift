@@ -13,7 +13,7 @@ import SwiftyJSON
 class HTMLService{
     // HTML包下载
     class func upgradeHTML(){
-        let url = "http://192.168.1.232:7777/api/Update/GetUpdateInfo?clientType=3&versionCode=\(GlobalAppSetting.wwwVersion)"
+        let url = GlobalAppSetting.xrmWebApiBaseUrl + "api/Update/GetUpdateInfo?clientType=3&versionCode=\(GlobalAppSetting.wwwVersion)"
         AlamofireHeaders.updateHeadersAuth()
         // 检查版本是否需要更新
         Alamofire.request(url, encoding: JSONEncoding.default, headers: AlamofireHeaders.headers).responseJSON(completionHandler: {
@@ -28,7 +28,7 @@ class HTMLService{
                         return
                     }
                     // 下载HTML的压缩包
-                    let downloadUrl = "http://192.168.1.232:7777/FileDownloadHandler.ashx?moduletype=version&fileid=\(json["FileId"])"
+                    let downloadUrl = GlobalAppSetting.xrmWebApiBaseUrl + "FileDownloadHandler.ashx?moduletype=version&fileid=\(json["FileId"])"
                     
                     // NSURLRequest+NSURLConnection
                     let htmlUrl: NSURL = NSURL(string: downloadUrl)!

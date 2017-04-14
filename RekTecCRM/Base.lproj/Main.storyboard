@@ -67,6 +67,15 @@
                                     <action selector="rememberSwitchChange:" destination="vQ0-FA-Cr6" eventType="valueChanged" id="eQc-3v-6D5"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-Am-qMv">
+                                <rect key="frame" x="282" y="360" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="设置服务器"/>
+                                <connections>
+                                    <action selector="set_server_click:" destination="vQ0-FA-Cr6" eventType="touchUpInside" id="gJG-F2-vYJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -75,6 +84,7 @@
                         <outlet property="password" destination="vCt-dD-jxd" id="28d-sD-ctm"/>
                         <outlet property="remember_password" destination="mh1-3E-dvn" id="KqT-jD-p01"/>
                         <outlet property="remember_password_label" destination="kYA-B9-7Y0" id="aEl-Ny-DkG"/>
+                        <outlet property="set_server" destination="ePE-Am-qMv" id="ZwT-l8-SNT"/>
                         <outlet property="username" destination="EB9-Iy-dFF" id="Fgs-Ma-snT"/>
                         <segue destination="21S-Ld-tq6" kind="showDetail" identifier="login_segue" animates="NO" id="QPb-Er-teh"/>
                     </connections>

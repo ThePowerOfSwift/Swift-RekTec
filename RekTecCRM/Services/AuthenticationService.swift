@@ -15,7 +15,7 @@ class AuthenticationService {
     
     // 用户登录接口
     class func loginCheck(authenUser: AuthenUser, success: @escaping(JSON) -> Void, failure: @escaping(Any) -> Void){
-        let url = "http://192.168.1.232:7777/api/Authentication/login"
+        let url = GlobalAppSetting.xrmWebApiBaseUrl + "api/Authentication/login"
         let parameters: Parameters = [
             "uid": authenUser.Uid,
             "pwd": authenUser.Pwd,

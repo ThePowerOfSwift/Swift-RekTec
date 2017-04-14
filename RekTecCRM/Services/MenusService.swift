@@ -13,7 +13,7 @@ import SwiftyJSON
 class MenusService{
     // 从服务器获取系统菜单，并把菜单缓存到本地数据库中
     class func getSystemMenusFromCloud(lastUpdateTime: String){
-        let url = "http://192.168.1.232:7777/api/SystemMenu/GetMobileSystemMenu?lastQueryTime=\(lastUpdateTime)"
+        let url = GlobalAppSetting.xrmWebApiBaseUrl + "api/SystemMenu/GetMobileSystemMenu?lastQueryTime=\(lastUpdateTime)"
         
         AlamofireHeaders.updateHeadersAuth()
         // 从服务器获取系统菜单
