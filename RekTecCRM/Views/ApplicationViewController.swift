@@ -27,7 +27,7 @@ class ApplicationViewController: UIViewController {
         
         let systemMenus = MenusRepository.getSystemMenusFromDb()
         
-        banaImage.frame = CGRect.init(x: 0, y: 65, width: self.view.bounds.width, height: 136)
+        banaImage.frame = CGRect.init(x: 0, y: 64, width: self.view.bounds.width, height: 136)
         
         let borderLine = UILabel.init(frame: CGRect.init(x: 0, y: 200, width: self.view.bounds.width, height: 1))
         borderLine.backgroundColor = UIColor.init(red: 248 / 255, green: 248 / 255, blue: 248 / 255, alpha: 1)

@@ -29,7 +29,7 @@ class MenusService{
                     
                     // 把菜单缓存到本地数据库中
                     let menuList = systemMenuList["SystemMenuList"]
-                    if systemMenuList["SystemMenuList"] != JSON.null || menuList.count > 0 {
+                    if systemMenuList["SystemMenuList"] != JSON.null && menuList.count > 0 {
                         var parentSystemMenus = [SystemMenus]()    // 待保存的父菜单
                         var childSystemMenus = [SystemMenus]()     // 待保存的子菜单
                         for menus in menuList.arrayValue {

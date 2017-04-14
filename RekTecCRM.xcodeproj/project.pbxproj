@@ -48,6 +48,8 @@
 		D72E8A921E7FD6BA005D8AAC /* AuthenUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E8A911E7FD6BA005D8AAC /* AuthenUser.swift */; };
 		D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */; };
 		D73E2D371E7686AB0096A97A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */; };
+		D757FA8C1EA0BAAC002B02E4 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FB3B001E8CE61000B31E1A /* NVActivityIndicatorView.framework */; };
+		D757FA8D1EA0BAD1002B02E4 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7FB3B001E8CE61000B31E1A /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D766AC321E8CC89600A7A2F4 /* AlamofireHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766AC311E8CC89600A7A2F4 /* AlamofireHeaders.swift */; };
 		D76B303C1E7D516F00DEC7B2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */; };
 		D7733E1C1E7BC5AF00E0AF1F /* GlobalAppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7733E1B1E7BC5AF00E0AF1F /* GlobalAppSetting.swift */; };
@@ -113,6 +115,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D757FA8D1EA0BAD1002B02E4 /* NVActivityIndicatorView.framework in Embed Frameworks */,
 				D72E8A781E7FD0BC005D8AAC /* SwiftyJSON.framework in Embed Frameworks */,
 				D72E8A6E1E7FD069005D8AAC /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -211,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D757FA8C1EA0BAAC002B02E4 /* NVActivityIndicatorView.framework in Frameworks */,
 				D715A5B91E8E2C32009A90F5 /* libz.tbd in Frameworks */,
 				D72E8A8B1E7FD1FB005D8AAC /* libsqlite3.tbd in Frameworks */,
 				D72E8A771E7FD0BC005D8AAC /* SwiftyJSON.framework in Frameworks */,
@@ -811,7 +815,7 @@
 				INFOPLIST_FILE = RekTecCRM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RekTecCRM;
+				PRODUCT_BUNDLE_IDENTIFIER = RekTecCRMch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RekTecCRM/SQliteDB/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -827,7 +831,7 @@
 				INFOPLIST_FILE = RekTecCRM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RekTecCRM;
+				PRODUCT_BUNDLE_IDENTIFIER = RekTecCRMch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RekTecCRM/SQliteDB/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
