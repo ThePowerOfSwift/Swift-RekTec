@@ -46,7 +46,6 @@
 		D72E8A8B1E7FD1FB005D8AAC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D72E8A8A1E7FD1FB005D8AAC /* libsqlite3.tbd */; };
 		D72E8A8F1E7FD3C2005D8AAC /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E8A8E1E7FD3C2005D8AAC /* AuthenticationService.swift */; };
 		D72E8A921E7FD6BA005D8AAC /* AuthenUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E8A911E7FD6BA005D8AAC /* AuthenUser.swift */; };
-		D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */; };
 		D73E2D371E7686AB0096A97A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */; };
 		D757FA8C1EA0BAAC002B02E4 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FB3B001E8CE61000B31E1A /* NVActivityIndicatorView.framework */; };
 		D757FA8D1EA0BAD1002B02E4 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7FB3B001E8CE61000B31E1A /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -186,7 +185,6 @@
 		D72E8A8A1E7FD1FB005D8AAC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D72E8A8E1E7FD3C2005D8AAC /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = Services/AuthenticationService.swift; sourceTree = "<group>"; };
 		D72E8A911E7FD6BA005D8AAC /* AuthenUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenUser.swift; path = Models/AuthenUser.swift; sourceTree = "<group>"; };
-		D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseStoryBoardSegue.swift; path = Base/BaseStoryBoardSegue.swift; sourceTree = "<group>"; };
 		D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabBarController.swift; path = Base/BaseTabBarController.swift; sourceTree = "<group>"; };
 		D766AC311E8CC89600A7A2F4 /* AlamofireHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireHeaders.swift; path = Utils/AlamofireHeaders.swift; sourceTree = "<group>"; };
 		D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Base/BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -400,7 +398,6 @@
 			isa = PBXGroup;
 			children = (
 				D73E2D361E7686AB0096A97A /* BaseTabBarController.swift */,
-				D73E2D341E76866F0096A97A /* BaseStoryBoardSegue.swift */,
 				D76B303B1E7D516F00DEC7B2 /* BaseNavigationController.swift */,
 			);
 			name = Base;
@@ -632,7 +629,6 @@
 			files = (
 				D73E2D371E7686AB0096A97A /* BaseTabBarController.swift in Sources */,
 				D715A5D31E8E2DF1009A90F5 /* aescrypt.c in Sources */,
-				D73E2D351E76866F0096A97A /* BaseStoryBoardSegue.swift in Sources */,
 				D715A5B61E8E2BDD009A90F5 /* SSZipArchive.m in Sources */,
 				D7A174901E8F9A4F00D4C719 /* SystemMenus.swift in Sources */,
 				D7CEB3721E77D4EA003FC739 /* ImageUtils.swift in Sources */,

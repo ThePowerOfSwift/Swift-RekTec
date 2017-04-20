@@ -12,20 +12,9 @@ class ServerAddressView{
     
     private var view: UIView
     
-    init(frame: CGRect, target: Any?, action: Selector) {
+    init(frame: CGRect, target: Any?) {
         self.view = UIView.init(frame: frame)
-        self.view.backgroundColor = UIColor.init(white: 0.9, alpha: 0.6)
-        
-        let closeButton = UIButton.init(frame: CGRect.init(x: 20, y: 20, width: 40, height: 40))
-//        closeButton.setTitle("Close", for: .normal)
-        closeButton.backgroundColor = .black
-//        let color = UIColor.init(red: 0, green: 153 / 255, blue: 1, alpha: 1)
-//        closeButton.setTitleColor(color, for: .normal)
-//        closeButton.setTitleColor(UIColor.white, for: .selected)
-//        closeButton.setTitleColor(UIColor.white, for: .highlighted)
-//        closeButton.setTitleColor(UIColor.white, for: .disabled)
-        closeButton.addTarget(target, action: action, for: .touchUpInside)
-        self.view.addSubview(closeButton)
+        self.view.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.3)
         
         let textField = UITextField.init(frame: CGRect.init(x: 10, y: frame.height / 2 - 40, width: frame.width - 20, height: 40))
         textField.text = GlobalAppSetting.xrmWebApiBaseUrl
@@ -49,6 +38,15 @@ class ServerAddressView{
     
     @objc func hideKeyboard(){
         self.view.endEditing(true)
+        
+        self.view.frame.origin.y = 0
+        UIView.animate(withDuration: 0.3, animations: {
+            _ in
+            self.view.frame.origin.y = self.view.bounds.height
+        }, completion: {
+            _ in
+            self.view.removeFromSuperview()
+        })
     }
     
     @objc func saveServerAddress(_ sender: UITextField){

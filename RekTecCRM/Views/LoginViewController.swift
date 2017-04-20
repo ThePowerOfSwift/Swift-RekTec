@@ -90,23 +90,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
         }
         return true
     }
-
-//    func launchAnimation(){
-//        let viewController = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
-//        let vc = viewController.instantiateViewController(withIdentifier: "LaunchScreen")
-//        let launchView = vc.view
-//        let mainWindow = UIApplication.shared.keyWindow
-//        launchView?.frame = (UIApplication.shared.keyWindow?.frame)!
-//        mainWindow?.addSubview(launchView!)
-//        
-//        UIView.animate(withDuration: 1.0, delay: 0.5, options: .beginFromCurrentState, animations: {
-//            launchView?.alpha = 0.0
-//            launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
-//        }, completion: {
-//            (finished: Bool) -> Void in
-//            launchView?.removeFromSuperview()
-//        })
-//    }
     
     // avatar设置
     func setLoginAvatar(){
@@ -224,7 +207,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
     
     // 设置服务器
     @IBAction func set_server_click(_ sender: UIButton) {
-        serverAddress = ServerAddressView(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height), target: self, action: #selector(closeServerSettingView(_:)))
+        serverAddress = ServerAddressView(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height), target: self)
         
         self.view.addSubview(serverAddress.View)
         
@@ -233,9 +216,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
             _ in
             self.serverAddress.View.frame.origin.y = 0
         })
-    }
-    func closeServerSettingView(_ button: UIButton){
-        self.serverAddress.View.removeFromSuperview()
     }
     
     // 登录按钮
