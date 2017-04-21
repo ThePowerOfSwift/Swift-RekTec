@@ -210,12 +210,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
         serverAddress = ServerAddressView(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height), target: self)
         
         self.view.addSubview(serverAddress.View)
-        
         self.serverAddress.View.frame.origin.y = self.view.bounds.height
-        UIView.animate(withDuration: 0.3, animations: {
-            _ in
-            self.serverAddress.View.frame.origin.y = 0
-        })
+        
+        if #available(iOS 10.0, *) {
+            let animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeOut){
+                self.serverAddress.View.frame.origin.y = 0
+            }
+            animator.startAnimation()
+        } else {
+            UIView.animate(withDuration: 0.3, animations: {
+                _ in
+                self.serverAddress.View.frame.origin.y = 0
+            })
+        }
     }
     
     // 登录按钮
